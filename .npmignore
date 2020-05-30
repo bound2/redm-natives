@@ -1,0 +1,12 @@
+.vscode
+out/
+node_modules/
+test/
+src/
+package-lock.json
+yarn-error.log
+yarn.lock
+.prettierrc
+.eslintrc.js
+.eslintignore
+.editorconfig

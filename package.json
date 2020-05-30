@@ -1,0 +1,38 @@
+{
+    "name": "redm-natives",
+    "version": "1.0.0",
+    "description": "TypeScript RedM natives",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "author": "bound2 <9380102+bound2@users.noreply.github.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bound2/redm-natives"
+    },
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+        "test": "mocha -r ts-node/register/transpile-only test/*.test.ts",
+        "prepublish": "tsc -b src"
+    },
+    "dependencies": {
+        "reflect-metadata": "^0.1.13"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.11",
+        "@types/mocha": "^7.0.2",
+        "@types/node": "^13.13.4",
+        "@typescript-eslint/eslint-plugin": "^2.30.0",
+        "@typescript-eslint/parser": "^2.30.0",
+        "chai": "^4.2.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-loader": "^4.0.2",
+        "mocha": "^7.1.2",
+        "prettier": "^2.0.5",
+        "ts-node": "^8.9.1",
+        "typescript": "^3.8.3"
+    }
+}
