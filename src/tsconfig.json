@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "outDir": "../dist",
+        "module": "es6",
+        "target": "es2017",
+        "declaration": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true
+    },
+    "include": [
+        "./**/*"
+    ],
+    "exclude": []
+}
