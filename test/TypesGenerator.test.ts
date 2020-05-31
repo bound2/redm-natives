@@ -2,8 +2,8 @@
 import 'mocha';
 import * as nativesJson from './natives.json';
 
-const lineSeparator = require('os').EOL;
-const fs = require('fs-extra');
+import { EOL } from 'os';
+import * as fs from 'fs-extra';
 
 interface Parameter {
 
@@ -44,12 +44,12 @@ function moduleDeclaration(ns: string, filepath: string): void {
     const nsJson = nativesJson[ns];
     const nsFns = Object.keys(nsJson);
 
-    let hashNatives: Array<Generatable> = new Array();
-    let namedNatives: Array<Generatable> = new Array();
+    const hashNatives: Array<Generatable> = new Array<Generatable>();
+    const namedNatives: Array<Generatable> = new Array<Generatable>();
     for (const fn of nsFns) {
         // Construct native function name that's invokable from JS
         let name = nsJson[fn].name;
-        const hashNative: boolean = !name;
+        const hashNative = !name;
         if (hashNative) {
             name = `N_${nsJson[fn]["hash"].toLowerCase()}`;
         } else {
@@ -59,7 +59,7 @@ function moduleDeclaration(ns: string, filepath: string): void {
         // Gather returnable parameters
         const params: Array<Parameter> = nsJson[fn]["params"];
         const returnParams: Array<string> = params
-            .filter((p) => p.type.endsWith("\*"))
+            .filter((p) => p.type.endsWith("*"))
             .map((p) => p.type.substring(0, p.type.length - 1))
             .map((p) => type(p));
         const returns: Array<string> = [type(nsJson[fn].results)].concat(returnParams);
@@ -71,7 +71,7 @@ function moduleDeclaration(ns: string, filepath: string): void {
         }
 
         // Gather function parameters
-        const fnParams: Array<string> = params.filter((p) => !p.type.endsWith("\*")).map((p) => `${p.name}: ${type(p.type)}`);
+        const fnParams: Array<string> = params.filter((p) => !p.type.endsWith("*")).map((p) => `${p.name}: ${type(p.type)}`);
         const paramString: string = fnParams.join(", ");
 
         const gen: Generatable = {
@@ -87,8 +87,8 @@ function moduleDeclaration(ns: string, filepath: string): void {
     }
 
     fs.removeSync(filepath);
-    const writeFn = (s: string) => {
-        fs.outputFileSync(filepath, s + lineSeparator, { flag: "a+" });
+    const writeFn = (s: string): void => {
+        fs.outputFileSync(filepath, s + EOL, { flag: "a+" });
     };
     writeFn("// Named functions");
     namedNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => writeFn(toDeclaration(n)));
