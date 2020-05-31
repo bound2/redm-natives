@@ -40,6 +40,8 @@ function type(t: string): string {
             return "number";
         case "char":
             return "string";
+        case "Hash":
+            return "string | number";
         default:
             return t;
     }
