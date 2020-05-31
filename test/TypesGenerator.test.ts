@@ -15,11 +15,11 @@ interface Generatable {
 
     funcName: string;
     funcParamString: string;
-    returnParamString: string;
+    returnTypesString: string;
 }
 
 function toDeclaration(g: Generatable): string {
-    return `declare function ${g.funcName}(${g.funcParamString}): ${g.returnParamString};`;
+    return `declare function ${g.funcName}(${g.funcParamString}): ${g.returnTypesString};`;
 }
 
 function capitalize(s: string): string {
@@ -42,6 +42,10 @@ function type(t: string): string {
             return "string";
         case "Hash":
             return "string | number";
+        case "Object":
+            return "Record<string, any>";
+        case "long":
+            return "bigint";
         default:
             return t;
     }
@@ -64,19 +68,24 @@ function moduleDeclaration(ns: string, filepath: string): void {
         }
 
         const rFn = (p: Parameter): boolean => {
-            return p.type.endsWith("*") && p.type !== "char*";
+            return p.type.endsWith("*") && p.type !== "char*" && p.type !== "void*";
         };
         // Gather returnable parameters
         const params: Array<Parameter> = nsJson[fn]["params"];
         const returnParams: Array<string> = params
             .filter((p) => rFn(p))
             .map((p) => type(p.type));
-        const returns: Array<string> = [type(nsJson[fn].results)].concat(returnParams);
-        let returnsString: string;
-        if (returns.length > 1) {
-            returnsString = `[${returns.join(", ")}]`;
+        let returnTypes: Array<string> = [type(nsJson[fn].results)].concat(returnParams);
+        // Fix issue where sometimes it has return type marked as void but has references returned
+        if (returnTypes.length > 1) {
+            returnTypes = returnTypes.filter((r) => r !== "void");
+        }
+
+        let returnTypesString: string;
+        if (returnTypes.length > 1) {
+            returnTypesString = `[${returnTypes.join(", ")}]`;
         } else {
-            returnsString = returns[0];
+            returnTypesString = returnTypes[0];
         }
 
         // Gather function parameters
@@ -88,7 +97,7 @@ function moduleDeclaration(ns: string, filepath: string): void {
         const gen: Generatable = {
             funcName: name,
             funcParamString: paramString,
-            returnParamString: returnsString
+            returnTypesString: returnTypesString
         };
         if (hashNative) {
             hashNatives.push(gen);
