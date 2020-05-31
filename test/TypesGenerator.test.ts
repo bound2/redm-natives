@@ -140,6 +140,38 @@ describe('Module declaration generator',
             const ns = "ITEMSET";
             moduleDeclaration(ns, "./out/ItemSet.module.ts");
         });
+        it('law', () => {
+            const ns = "LAW";
+            moduleDeclaration(ns, "./out/Law.module.ts");
+        });
+        it('localization', () => {
+            const ns = "LOCALIZATION";
+            moduleDeclaration(ns, "./out/Localization.module.ts");
+        });
+        it('map', () => {
+            const ns = "MAP";
+            moduleDeclaration(ns, "./out/Map.module.ts");
+        });
+        it('missiondata', () => {
+            const ns = "MISSIONDATA";
+            moduleDeclaration(ns, "./out/MissionData.module.ts");
+        });
+        it('minigame', () => {
+            const ns = "MINIGAME";
+            moduleDeclaration(ns, "./out/Minigame.module.ts");
+        });
+        it('misc', () => {
+            const ns = "MISC";
+            moduleDeclaration(ns, "./out/Misc.module.ts");
+        });
+        it('money', () => {
+            const ns = "MONEY";
+            moduleDeclaration(ns, "./out/Money.module.ts");
+        });
+        it('netshopping', () => {
+            const ns = "NETSHOPPING";
+            moduleDeclaration(ns, "./out/Netshopping.module.ts");
+        });
     }
 );
 
