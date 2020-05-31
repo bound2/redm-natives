@@ -300,6 +300,38 @@ describe('Module declaration generator',
             const ns = "VOLUME";
             moduleDeclaration(ns, "./out/Volume.module.ts");
         });
+        it('water', () => {
+            const ns = "WATER";
+            moduleDeclaration(ns, "./out/Water.module.ts");
+        });
+        it('vehicle', () => {
+            const ns = "VEHICLE";
+            moduleDeclaration(ns, "./out/Vehicle.module.ts");
+        });
+        it('weapon', () => {
+            const ns = "WEAPON";
+            moduleDeclaration(ns, "./out/Weapon.module.ts");
+        });
+        it('zone', () => {
+            const ns = "ZONE";
+            moduleDeclaration(ns, "./out/Zone.module.ts");
+        });
+        it('namespace29', () => {
+            const ns = "_NAMESPACE29";
+            moduleDeclaration(ns, "./out/Namespace29.module.ts");
+        });
+        it('namespace26', () => {
+            const ns = "_NAMESPACE26";
+            moduleDeclaration(ns, "./out/Namespace26.module.ts");
+        });
+        it('namespace30', () => {
+            const ns = "_NAMESPACE30";
+            moduleDeclaration(ns, "./out/Namespace30.module.ts");
+        });
+        it('namespace4', () => {
+            const ns = "_NAMESPACE4";
+            moduleDeclaration(ns, "./out/Namespace4.module.ts");
+        });
     }
 );
 
