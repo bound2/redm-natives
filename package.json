@@ -18,6 +18,7 @@
         "prepublish": "tsc -b src"
     },
     "dependencies": {
+        "fs-extra": "^9.0.0",
         "reflect-metadata": "^0.1.13"
     },
     "devDependencies": {

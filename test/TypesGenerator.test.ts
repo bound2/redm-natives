@@ -1,13 +1,16 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 import 'mocha';
 import { expect } from 'chai';
-import * as nativesJson from './natives.json'
+import * as nativesJson from './natives.json';
+
+const lineSeparator = require('os').EOL;
+const fs = require('fs-extra');
 
 describe('Module declaration generator',
     () => {
         it('namespace71', () => {
             const ns = "_NAMESPACE71";
-            moduleDeclaration(ns, true, true);
+            moduleDeclaration(ns, "./out/Namespace71.module.ts");
         });
     }
 );
@@ -26,7 +29,7 @@ interface Generatable {
     returnParamString: string;
 }
 
-function moduleDeclaration(ns: string, printNamed: boolean, printHashed: boolean): void {
+function moduleDeclaration(ns: string, filepath: string): void {
     const nsJson = nativesJson[ns];
     const nsFns = Object.keys(nsJson);
 
@@ -71,14 +74,15 @@ function moduleDeclaration(ns: string, printNamed: boolean, printHashed: boolean
             namedNatives.push(gen);
         }
     }
-    if (printNamed) {
-        console.log("// Named functions");
-        namedNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => console.log(toDeclaration(n)));
-    }
-    if (printHashed) {
-        console.log("// Hash functions");
-        hashNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => console.log(toDeclaration(n)));
-    }
+
+    fs.removeSync(filepath);
+    const writeFn = (s: string) => {
+        fs.outputFileSync(filepath, s + lineSeparator, { flag: "a+" });
+    };
+    writeFn("// Named functions");
+    namedNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => writeFn(toDeclaration(n)));
+    writeFn("// Hash functions");
+    hashNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => writeFn(toDeclaration(n)));
 }
 
 function toDeclaration(g: Generatable): string {
