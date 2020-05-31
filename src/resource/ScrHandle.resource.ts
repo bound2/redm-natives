@@ -1,1 +1,1 @@
-export interface ScrHandle { }
+export interface ScrHandle {}
