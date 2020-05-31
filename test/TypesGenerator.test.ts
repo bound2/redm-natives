@@ -56,7 +56,7 @@ interface Generatable {
 }
 
 function toDeclaration(g: Generatable): string {
-    return `declare function ${g.funcName}(${g.funcParamString}): ${g.returnTypesString};`;
+    return `export declare function ${g.funcName}(${g.funcParamString}): ${g.returnTypesString};`;
 }
 
 function capitalize(s: string): string {
