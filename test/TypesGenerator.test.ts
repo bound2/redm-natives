@@ -236,6 +236,38 @@ describe('Module declaration generator',
             const ns = "SOCIALCLUB";
             moduleDeclaration(ns, "./out/SocialClub.module.ts");
         });
+        it('scripts', () => {
+            const ns = "SCRIPTS";
+            moduleDeclaration(ns, "./out/Scripts.module.ts");
+        });
+        it('shapetest', () => {
+            const ns = "SHAPETEST";
+            moduleDeclaration(ns, "./out/ShapeTest.module.ts");
+        });
+        it('socialclubfeed', () => {
+            const ns = "SOCIALCLUBFEED";
+            moduleDeclaration(ns, "./out/SocialClubFeed.module.ts");
+        });
+        it('spactionproxy', () => {
+            const ns = "SPACTIONPROXY";
+            moduleDeclaration(ns, "./out/SpactionProxy.module.ts");
+        });
+        it('stats', () => {
+            const ns = "STATS";
+            moduleDeclaration(ns, "./out/Stats.module.ts");
+        });
+        it('streaming', () => {
+            const ns = "STREAMING";
+            moduleDeclaration(ns, "./out/Streaming.module.ts");
+        });
+        it('telemetry', () => {
+            const ns = "TELEMETRY";
+            moduleDeclaration(ns, "./out/Telemetry.module.ts");
+        });
+        it('txd', () => {
+            const ns = "TXD";
+            moduleDeclaration(ns, "./out/Txd.module.ts");
+        });
     }
 );
 
