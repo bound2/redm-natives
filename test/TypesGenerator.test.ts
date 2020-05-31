@@ -44,6 +44,38 @@ describe('Module declaration generator',
             const ns = "BUILTIN";
             moduleDeclaration(ns, "./out/Builtin.module.ts");
         });
+        it('clock', () => {
+            const ns = "CLOCK";
+            moduleDeclaration(ns, "./out/Clock.module.ts");
+        });
+        it('cam', () => {
+            const ns = "CAM";
+            moduleDeclaration(ns, "./out/Cam.module.ts");
+        });
+        it('collection', () => {
+            const ns = "COLLECTION";
+            moduleDeclaration(ns, "./out/Collection.module.ts");
+        });
+        it('compapp', () => {
+            const ns = "COMPAPP";
+            moduleDeclaration(ns, "./out/CompApp.module.ts");
+        });
+        it('companion', () => {
+            const ns = "COMPANION";
+            moduleDeclaration(ns, "./out/Companion.module.ts");
+        });
+        it('compendium', () => {
+            const ns = "COMPENDIUM";
+            moduleDeclaration(ns, "./out/Compendium.module.ts");
+        });
+        it('crashlog', () => {
+            const ns = "CRASHLOG";
+            moduleDeclaration(ns, "./out/CrashLog.module.ts");
+        });
+        it('databinding', () => {
+            const ns = "DATABINDING";
+            moduleDeclaration(ns, "./out/Databinding.module.ts");
+        });
     }
 );
 
