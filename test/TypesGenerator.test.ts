@@ -27,6 +27,9 @@ function capitalize(s: string): string {
 }
 
 function type(t: string): string {
+    if (t.endsWith("*")) {
+        t = t.slice(0, -1);
+    }
     switch (t) {
         case "Any":
             return "any";
@@ -35,6 +38,8 @@ function type(t: string): string {
         case "int":
         case "float":
             return "number";
+        case "char":
+            return "string";
         default:
             return t;
     }
@@ -56,12 +61,14 @@ function moduleDeclaration(ns: string, filepath: string): void {
             name = name.split("_").filter((p) => p).map((p) => capitalize(p)).reduce((a, b) => a + b);
         }
 
+        const rFn = (p: Parameter): boolean => {
+            return p.type.endsWith("*") && p.type !== "char*";
+        };
         // Gather returnable parameters
         const params: Array<Parameter> = nsJson[fn]["params"];
         const returnParams: Array<string> = params
-            .filter((p) => p.type.endsWith("*"))
-            .map((p) => p.type.substring(0, p.type.length - 1))
-            .map((p) => type(p));
+            .filter((p) => rFn(p))
+            .map((p) => type(p.type));
         const returns: Array<string> = [type(nsJson[fn].results)].concat(returnParams);
         let returnsString: string;
         if (returns.length > 1) {
@@ -71,7 +78,9 @@ function moduleDeclaration(ns: string, filepath: string): void {
         }
 
         // Gather function parameters
-        const fnParams: Array<string> = params.filter((p) => !p.type.endsWith("*")).map((p) => `${p.name}: ${type(p.type)}`);
+        const fnParams: Array<string> = params
+            .filter((p) => !rFn(p))
+            .map((p) => `${p.name}: ${type(p.type)}`);
         const paramString: string = fnParams.join(", ");
 
         const gen: Generatable = {
