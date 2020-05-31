@@ -108,6 +108,38 @@ describe('Module declaration generator',
             const ns = "FIRE";
             moduleDeclaration(ns, "./out/Fire.module.ts");
         });
+        it('googleanalytics', () => {
+            const ns = "GOOGLE_ANALYTICS";
+            moduleDeclaration(ns, "./out/GoogleAnalytics.module.ts");
+        });
+        it('flock', () => {
+            const ns = "FLOCK";
+            moduleDeclaration(ns, "./out/Flock.module.ts");
+        });
+        it('graphics', () => {
+            const ns = "GRAPHICS";
+            moduleDeclaration(ns, "./out/Graphics.module.ts");
+        });
+        it('inventory', () => {
+            const ns = "INVENTORY";
+            moduleDeclaration(ns, "./out/Inventory.module.ts");
+        });
+        it('hud', () => {
+            const ns = "HUD";
+            moduleDeclaration(ns, "./out/Hud.module.ts");
+        });
+        it('interior', () => {
+            const ns = "INTERIOR";
+            moduleDeclaration(ns, "./out/Interior.module.ts");
+        });
+        it('itemdatabase', () => {
+            const ns = "ITEMDATABASE";
+            moduleDeclaration(ns, "./out/ItemDatabase.module.ts");
+        });
+        it('itemset', () => {
+            const ns = "ITEMSET";
+            moduleDeclaration(ns, "./out/ItemSet.module.ts");
+        });
     }
 );
 
