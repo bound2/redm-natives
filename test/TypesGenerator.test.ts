@@ -9,14 +9,17 @@ describe('Namespace71 module',
         const nsJson = nativesJson[ns];
         const nsFns = Object.keys(nsJson);
         //console.log(nsJson);
+
+        let hashNatives: Array<Generatable> = new Array();
+        let namedNatives: Array<Generatable> = new Array();
         for (const fn of nsFns) {
             // Construct native function name that's invokable from JS
             let name = nsJson[fn].name;
-            if (name) {
-                const camelcaseName = name.split("_").filter((p) => p).map((p) => capitalize(p)).reduce((a, b) => a + b);
-                name = camelcaseName;
-            } else {
+            const hashNative: boolean = !name;
+            if (hashNative) {
                 name = `N_${nsJson[fn]["hash"]}`;
+            } else {
+                name = name.split("_").filter((p) => p).map((p) => capitalize(p)).reduce((a, b) => a + b);
             }
             //console.log(name);
 
@@ -41,8 +44,22 @@ describe('Namespace71 module',
             //console.log(paramString);
 
             //declare function ShowSimpleRightText(p2: number): [any, any, any];
-            console.log(`declare function ${name}(${paramString}): ${returnsString};`);
+            const gen: Generatable = {
+                funcName: name,
+                funcParamString: paramString,
+                returnParamString: returnsString
+            };
+            if (hashNative) {
+                hashNatives.push(gen);
+            } else {
+                namedNatives.push(gen);
+            }
+            //console.log(`declare function ${name}(${paramString}): ${returnsString};`);
         }
+        console.log("// Named functions");
+        namedNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => console.log(toDeclaration(n)));
+        console.log("// Hash functions");
+        hashNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => console.log(toDeclaration(n)));
     }
 );
 
@@ -51,6 +68,17 @@ interface Parameter {
     name: string;
     type: string;
     description: string;
+}
+
+interface Generatable {
+
+    funcName: string;
+    funcParamString: string;
+    returnParamString: string;
+}
+
+function toDeclaration(g: Generatable): string {
+    return `declare function ${g.funcName}(${g.funcParamString}): ${g.returnParamString};`;
 }
 
 function capitalize(s: string): string {
