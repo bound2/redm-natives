@@ -4,6 +4,43 @@ import * as nativesJson from './natives.json';
 import { EOL } from 'os';
 import * as fs from 'fs-extra';
 
+const reserwedKeywords: Array<string> = [
+    'break',
+    'case',
+    'catch',
+    'class',
+    'const',
+    'continue',
+    'debugger',
+    'default',
+    'delete',
+    'do',
+    'else',
+    'export',
+    'extends',
+    'finally',
+    'for',
+    'function',
+    'if',
+    'import',
+    'in',
+    'instanceof',
+    'new',
+    'return',
+    'super',
+    'switch',
+    'this',
+    'throw',
+    'try',
+    'typeof',
+    'var',
+    'void',
+    'while',
+    'with',
+    'yield',
+    'let'
+];
+
 interface Parameter {
 
     name: string;
@@ -26,6 +63,13 @@ function capitalize(s: string): string {
     return s[0].toUpperCase() + s.slice(1).toLowerCase();
 }
 
+function safeVarName(s: string): string {
+    if (reserwedKeywords.includes(s)) {
+        return `a${capitalize(s)}`;
+    }
+    return s;
+}
+
 function type(t: string): string {
     if (t.endsWith("*")) {
         t = t.slice(0, -1);
@@ -37,6 +81,14 @@ function type(t: string): string {
             return "boolean";
         case "int":
         case "float":
+        case "Vehicle":
+        case "Entity":
+        case "Ped":
+        case "ScrHandle":
+        case "Cam":
+        case "Player":
+        case "FireId":
+        case "Blip":
             return "number";
         case "char":
             return "string";
@@ -46,6 +98,8 @@ function type(t: string): string {
             return "Record<string, any>";
         case "long":
             return "bigint";
+        case "Vector3":
+            return "[number, number, number]";
         default:
             return t;
     }
@@ -91,7 +145,7 @@ function moduleDeclaration(ns: string, filepath: string): void {
         // Gather function parameters
         const fnParams: Array<string> = params
             .filter((p) => !rFn(p))
-            .map((p) => `${p.name}: ${type(p.type)}`);
+            .map((p) => `${safeVarName(p.name)}: ${type(p.type)}`);
         const paramString: string = fnParams.join(", ");
 
         const gen: Generatable = {
