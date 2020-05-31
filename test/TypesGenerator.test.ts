@@ -16,7 +16,7 @@ describe('Namespace71 module',
             let name = nsJson[fn].name;
             const hashNative: boolean = !name;
             if (hashNative) {
-                name = `N_${nsJson[fn]["hash"]}`;
+                name = `N_${nsJson[fn]["hash"].toLowerCase()}`;
             } else {
                 name = name.split("_").filter((p) => p).map((p) => capitalize(p)).reduce((a, b) => a + b);
             }
@@ -86,6 +86,8 @@ function type(t: string): string {
             return "any";
         case "BOOL":
             return "boolean";
+        case "int":
+            return "number";
         default:
             return t;
     }

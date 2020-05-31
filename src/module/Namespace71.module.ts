@@ -1,10 +1,11 @@
+// Named functions
 declare function ShowAdvancedNotification(p2: number, p3: number): [any, any, any];
 declare function ShowLocationNotification(p2: number, p3: number): [any, any, any];
 declare function ShowNotification(p2: number, p3: number): [any, any, any];
 declare function ShowObjective(p2: number): [any, any, any];
 declare function ShowSimpleRightText(p2: number): [any, any, any];
 declare function ShowTooltip(p2: number): [any, any, any];
-// natives
+// Hash functions
 declare function N_0x02bcc0fe9eba3529(p0: any, p1: any, p2: any, p3: any, p4: any): any;
 declare function N_0x0fd07141ad048aae(p0: any, p1: any): any;
 declare function N_0x18d6869fbffec0f8(p0: any, p1: any, p2: any, p3: any): any;
@@ -24,3 +25,4 @@ declare function N_0xb249ebcb30dd88e0(p0: any, p1: any, p2: any): any;
 declare function N_0xb7223b91cd6b7e07(p0: any): any;
 declare function N_0xc17f69e1418cd11f(p0: any): any;
 declare function N_0xc48152bc6b3e821c(p0: any, p1: any, p2: any): any;
+declare function N_0xdd1232b332cbb9e7(p0: any, p1: any, p2: any): void;
