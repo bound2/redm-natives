@@ -8,7 +8,7 @@ describe('Namespace71 module',
         const ns = "_NAMESPACE71";
         const nsJson = nativesJson[ns];
         const nsFns = Object.keys(nsJson);
-        console.log(nsJson);
+        //console.log(nsJson);
         for (const fn of nsFns) {
             // Construct native function name that's invokable from JS
             let name = nsJson[fn].name;
@@ -18,7 +18,7 @@ describe('Namespace71 module',
             } else {
                 name = `N_${nsJson[fn]["hash"]}`;
             }
-            console.log(name);
+            //console.log(name);
 
             // Gather returnable parameters
             const params: Array<Parameter> = nsJson[fn]["params"];
@@ -27,12 +27,21 @@ describe('Namespace71 module',
                 .map((p) => p.type.substring(0, p.type.length - 1))
                 .map((p) => type(p));
             const returns: Array<string> = [type(nsJson[fn].results)].concat(returnParams);
+            let returnsString: string;
+            if (returns.length > 1) {
+                returnsString = `[${returns.join(", ")}]`;
+            } else {
+                returnsString = returns[0];
+            }
 
             // Gather function parameters
             const fnParams: Array<string> = params.filter((p) => !p.type.endsWith("\*")).map((p) => `${p.name}: ${type(p.type)}`);
             const paramString: string = fnParams.join(", ");
-            console.log(returns);
-            console.log(paramString);
+            //console.log(returns);
+            //console.log(paramString);
+
+            //declare function ShowSimpleRightText(p2: number): [any, any, any];
+            console.log(`declare function ${name}(${paramString}): ${returnsString};`);
         }
     }
 );
