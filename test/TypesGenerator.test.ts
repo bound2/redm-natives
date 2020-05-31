@@ -172,6 +172,38 @@ describe('Module declaration generator',
             const ns = "NETSHOPPING";
             moduleDeclaration(ns, "./out/Netshopping.module.ts");
         });
+        it('network', () => {
+            const ns = "NETWORK";
+            moduleDeclaration(ns, "./out/Network.module.ts");
+        });
+        it('object', () => {
+            const ns = "OBJECT";
+            moduleDeclaration(ns, "./out/Object.module.ts");
+        });
+        it('pathfind', () => {
+            const ns = "PATHFIND";
+            moduleDeclaration(ns, "./out/Pathfind.module.ts");
+        });
+        it('pad', () => {
+            const ns = "PAD";
+            moduleDeclaration(ns, "./out/Pad.module.ts");
+        });
+        it('perschar', () => {
+            const ns = "PERSCHAR";
+            moduleDeclaration(ns, "./out/Perschar.module.ts");
+        });
+        it('physics', () => {
+            const ns = "PHYSICS";
+            moduleDeclaration(ns, "./out/Physics.module.ts");
+        });
+        it('player', () => {
+            const ns = "PLAYER";
+            moduleDeclaration(ns, "./out/Player.module.ts");
+        });
+        it('population', () => {
+            const ns = "POPULATION";
+            moduleDeclaration(ns, "./out/Population.module.ts");
+        });
     }
 );
 
