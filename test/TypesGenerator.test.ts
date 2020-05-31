@@ -268,6 +268,38 @@ describe('Module declaration generator',
             const ns = "TXD";
             moduleDeclaration(ns, "./out/Txd.module.ts");
         });
+        it('uiapps', () => {
+            const ns = "UIAPPS";
+            moduleDeclaration(ns, "./out/UiApps.module.ts");
+        });
+        it('task', () => {
+            const ns = "TASK";
+            moduleDeclaration(ns, "./out/Task.module.ts");
+        });
+        it('uievents', () => {
+            const ns = "UIEVENTS";
+            moduleDeclaration(ns, "./out/UiEvents.module.ts");
+        });
+        it('uitutorial', () => {
+            const ns = "UITUTORIAL";
+            moduleDeclaration(ns, "./out/UiTutorial.module.ts");
+        });
+        it('uistatemachine', () => {
+            const ns = "UISTATEMACHINE";
+            moduleDeclaration(ns, "./out/UiStateMachine.module.ts");
+        });
+        it('uilog', () => {
+            const ns = "UILOG";
+            moduleDeclaration(ns, "./out/UiLog.module.ts");
+        });
+        it('unlock', () => {
+            const ns = "UNLOCK";
+            moduleDeclaration(ns, "./out/Unlock.module.ts");
+        });
+        it('volume', () => {
+            const ns = "VOLUME";
+            moduleDeclaration(ns, "./out/Volume.module.ts");
+        });
     }
 );
 
