@@ -89,6 +89,7 @@ function type(t: string): string {
         case "Player":
         case "FireId":
         case "Blip":
+        case "Pickup":
             return "number";
         case "char":
             return "string";
