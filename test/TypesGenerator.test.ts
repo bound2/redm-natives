@@ -33,6 +33,7 @@ function type(t: string): string {
         case "BOOL":
             return "boolean";
         case "int":
+        case "float":
             return "number";
         default:
             return t;
