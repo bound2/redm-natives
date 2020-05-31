@@ -8,7 +8,6 @@ describe('Namespace71 module',
         const ns = "_NAMESPACE71";
         const nsJson = nativesJson[ns];
         const nsFns = Object.keys(nsJson);
-        //console.log(nsJson);
 
         let hashNatives: Array<Generatable> = new Array();
         let namedNatives: Array<Generatable> = new Array();
@@ -21,7 +20,6 @@ describe('Namespace71 module',
             } else {
                 name = name.split("_").filter((p) => p).map((p) => capitalize(p)).reduce((a, b) => a + b);
             }
-            //console.log(name);
 
             // Gather returnable parameters
             const params: Array<Parameter> = nsJson[fn]["params"];
@@ -40,10 +38,7 @@ describe('Namespace71 module',
             // Gather function parameters
             const fnParams: Array<string> = params.filter((p) => !p.type.endsWith("\*")).map((p) => `${p.name}: ${type(p.type)}`);
             const paramString: string = fnParams.join(", ");
-            //console.log(returns);
-            //console.log(paramString);
 
-            //declare function ShowSimpleRightText(p2: number): [any, any, any];
             const gen: Generatable = {
                 funcName: name,
                 funcParamString: paramString,
@@ -54,8 +49,8 @@ describe('Namespace71 module',
             } else {
                 namedNatives.push(gen);
             }
-            //console.log(`declare function ${name}(${paramString}): ${returnsString};`);
         }
+
         console.log("// Named functions");
         namedNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => console.log(toDeclaration(n)));
         console.log("// Hash functions");
