@@ -12,6 +12,38 @@ describe('Module declaration generator',
             const ns = "_NAMESPACE71";
             moduleDeclaration(ns, "./out/Namespace71.module.ts");
         });
+        it('aitransport', () => {
+            const ns = "AITRANSPORT";
+            moduleDeclaration(ns, "./out/AiTransport.module.ts");
+        });
+        it('aicoverpoint', () => {
+            const ns = "AICOVERPOINT";
+            moduleDeclaration(ns, "./out/AiCoverpoint.module.ts");
+        });
+        it('animscene', () => {
+            const ns = "ANIMSCENE";
+            moduleDeclaration(ns, "./out/Animscene.module.ts");
+        });
+        it('bounty', () => {
+            const ns = "BOUNTY";
+            moduleDeclaration(ns, "./out/Bounty.module.ts");
+        });
+        it('audio', () => {
+            const ns = "AUDIO";
+            moduleDeclaration(ns, "./out/Audio.module.ts");
+        });
+        it('attribute', () => {
+            const ns = "ATTRIBUTE";
+            moduleDeclaration(ns, "./out/Attribute.module.ts");
+        });
+        it('brain', () => {
+            const ns = "BRAIN";
+            moduleDeclaration(ns, "./out/Brain.module.ts");
+        });
+        it('builtin', () => {
+            const ns = "BUILTIN";
+            moduleDeclaration(ns, "./out/Builtin.module.ts");
+        });
     }
 );
 
