@@ -76,6 +76,38 @@ describe('Module declaration generator',
             const ns = "DATABINDING";
             moduleDeclaration(ns, "./out/Databinding.module.ts");
         });
+        it('crew', () => {
+            const ns = "CREW";
+            moduleDeclaration(ns, "./out/Crew.module.ts");
+        });
+        it('datafile', () => {
+            const ns = "DATAFILE";
+            moduleDeclaration(ns, "./out/Datafile.module.ts");
+        });
+        it('decorator', () => {
+            const ns = "DECORATOR";
+            moduleDeclaration(ns, "./out/Decorator.module.ts");
+        });
+        it('debug', () => {
+            const ns = "DEBUG";
+            moduleDeclaration(ns, "./out/Debug.module.ts");
+        });
+        it('dlc', () => {
+            const ns = "DLC";
+            moduleDeclaration(ns, "./out/Dlc.module.ts");
+        });
+        it('entity', () => {
+            const ns = "ENTITY";
+            moduleDeclaration(ns, "./out/Entity.module.ts");
+        });
+        it('event', () => {
+            const ns = "EVENT";
+            moduleDeclaration(ns, "./out/Event.module.ts");
+        });
+        it('fire', () => {
+            const ns = "FIRE";
+            moduleDeclaration(ns, "./out/Fire.module.ts");
+        });
     }
 );
 
