@@ -204,6 +204,38 @@ describe('Module declaration generator',
             const ns = "POPULATION";
             moduleDeclaration(ns, "./out/Population.module.ts");
         });
+        it('ped', () => {
+            const ns = "PED";
+            moduleDeclaration(ns, "./out/Ped.module.ts");
+        });
+        it('posse', () => {
+            const ns = "POSSE";
+            moduleDeclaration(ns, "./out/Posse.module.ts");
+        });
+        it('propset', () => {
+            const ns = "PROPSET";
+            moduleDeclaration(ns, "./out/PropSet.module.ts");
+        });
+        it('queue', () => {
+            const ns = "QUEUE";
+            moduleDeclaration(ns, "./out/Queue.module.ts");
+        });
+        it('recording', () => {
+            const ns = "RECORDING";
+            moduleDeclaration(ns, "./out/Recording.module.ts");
+        });
+        it('save', () => {
+            const ns = "SAVE";
+            moduleDeclaration(ns, "./out/Save.module.ts");
+        });
+        it('replay', () => {
+            const ns = "REPLAY";
+            moduleDeclaration(ns, "./out/Replay.module.ts");
+        });
+        it('socialclub', () => {
+            const ns = "SOCIALCLUB";
+            moduleDeclaration(ns, "./out/SocialClub.module.ts");
+        });
     }
 );
 
