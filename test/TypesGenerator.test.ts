@@ -8,10 +8,6 @@ const fs = require('fs-extra');
 
 describe('Module declaration generator',
     () => {
-        it('namespace71', () => {
-            const ns = "_NAMESPACE71";
-            moduleDeclaration(ns, "./out/Namespace71.module.ts");
-        });
         it('aitransport', () => {
             const ns = "AITRANSPORT";
             moduleDeclaration(ns, "./out/AiTransport.module.ts");
@@ -331,6 +327,26 @@ describe('Module declaration generator',
         it('namespace4', () => {
             const ns = "_NAMESPACE4";
             moduleDeclaration(ns, "./out/Namespace4.module.ts");
+        });
+        it('namespace71', () => {
+            const ns = "_NAMESPACE71";
+            moduleDeclaration(ns, "./out/Namespace71.module.ts");
+        });
+        it('namespace49', () => {
+            const ns = "_NAMESPACE49";
+            moduleDeclaration(ns, "./out/Namespace49.module.ts");
+        });
+        it('namespace73', () => {
+            const ns = "_NAMESPACE73";
+            moduleDeclaration(ns, "./out/Namespace73.module.ts");
+        });
+        it('namespace76', () => {
+            const ns = "_NAMESPACE76";
+            moduleDeclaration(ns, "./out/Namespace76.module.ts");
+        });
+        it('namespace79', () => {
+            const ns = "_NAMESPACE79";
+            moduleDeclaration(ns, "./out/Namespace79.module.ts");
         });
     }
 );
