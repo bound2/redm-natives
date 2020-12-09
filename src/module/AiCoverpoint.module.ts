@@ -1,7 +1,7 @@
 // Named functions
 export declare function AddScriptedCoverPoint(): [number, any];
-export declare function TaskEnterCover(p0: any): void;
-export declare function TaskExitCover(p0: any): void;
+export declare function TaskEnterCover(ped: number): void;
+export declare function TaskExitCover(ped: number): void;
 // Hash functions
 export declare function N_0x140b3cb1d424a945(p0: any, p1: any): void;
 export declare function N_0x1a7a802b2301edc0(p0: any): void;

@@ -14,6 +14,7 @@ export declare function N_0x0f1861101c9a9944(popZone: number, p1: boolean): void
 export declare function N_0x18262cafebb5fbe1(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any): void;
 export declare function N_0x2161278c6322f740(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): void;
 export declare function N_0x247f86595d396344(p0: any): void;
+export declare function N_0x2660e7720edc4bd0(p0: any, p1: any, p2: any): void;
 export declare function N_0x324ab2a68ad8aee5(): void;
 export declare function N_0x578e2fa64e847c60(popZone: number, p1: number): void;
 export declare function N_0x595478b3bbc3076d(): any;

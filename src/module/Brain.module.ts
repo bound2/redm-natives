@@ -3,6 +3,7 @@ export declare function DisableScriptBrainSet(brainSet: number): void;
 export declare function EnableScriptBrainSet(brainSet: number): void;
 export declare function RegisterObjectScriptBrain(scriptName: string, modelHash: string | number, p2: number, activationRange: number, p4: number, p5: number): void;
 // Hash functions
+export declare function N_0x38f1e09224eeca09(p0: any): void;
 export declare function N_0x4aa5ea1edfb25786(p0: any): void;
 export declare function N_0x4e4507cc5e4db869(p0: any, p1: any, p2: any, p3: any): any;
 export declare function N_0x6818d1a194e29983(): any;

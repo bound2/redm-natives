@@ -1,6 +1,6 @@
 // Named functions
+export declare function CollectableCategorySetHasReceivedList(p0: any, p1: any, p2: any): void;
 // Hash functions
-export declare function N_0x0b6d275d2f242e17(p0: any, p1: any, p2: any): void;
 export declare function N_0x126cbebba46693cf(p0: any, p1: any, p2: any): any;
 export declare function N_0x13aaecda43318bfe(p0: any, p1: any): any;
 export declare function N_0x1f1dd794908c2bfa(p0: any): [number, number, number];

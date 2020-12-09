@@ -1,6 +1,6 @@
 // Named functions
-export declare function TaskEnterTransport(p0: any): void;
-export declare function TaskExitTransport(p0: any): void;
+export declare function TaskEnterTransport(): any;
+export declare function TaskExitTransport(): any;
 // Hash functions
 export declare function N_0x13f138225c202f66(p0: any, p1: any): void;
 export declare function N_0x159ef5b6edce00e8(p0: any, p1: any): any;

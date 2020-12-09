@@ -1,20 +1,21 @@
 // Named functions
-export declare function GetTotalScInboxIds(): number;
 export declare function IsScInboxValid(p0: number): boolean;
+export declare function ScInboxGetTotalNumMessages(): number;
 export declare function ScInboxMessageGetDataInt(p0: number, context: string): [boolean, number];
 export declare function ScInboxMessageGetDataString(p0: number, context: string, out: string): boolean;
-export declare function ScInboxMessageGetString(): string;
+export declare function ScInboxMessageGetString(p0: number): string;
 export declare function ScInboxMessageInit(p0: number): string | number;
 export declare function ScInboxMessagePop(p0: number): boolean;
+export declare function ScPresenceAttrSetFloat(attrHash: string | number, value: number): boolean;
+export declare function ScPresenceAttrSetFloatEx(attrName: string, value: number, p2: boolean): boolean;
+export declare function ScPresenceAttrSetIntEx(attrName: string, value: number, p2: boolean): boolean;
+export declare function ScPresenceAttrSetStringEx(attrName: string, value: string, p2: boolean): boolean;
 export declare function ScProfanityCheckString(string: string): [boolean, number];
 export declare function ScProfanityGetCheckIsPending(token: number): boolean;
 export declare function ScProfanityGetCheckIsValid(token: number): boolean;
 export declare function ScProfanityGetStringPassed(token: number): boolean;
 export declare function ScProfanityGetStringStatus(token: number): number;
 // Hash functions
-export declare function N_0x00000000467f4caa(): any;
-export declare function N_0x0000000085488c49(): any;
-export declare function N_0x00000000eb2d93b3(): any;
 export declare function N_0x03c03abbabbef752(): any;
 export declare function N_0x049d2196d9d11184(): boolean;
 export declare function N_0x060bbad634c2b44b(): any;
@@ -28,7 +29,6 @@ export declare function N_0x85ea0bec7b1f7622(): any;
 export declare function N_0x89d9bde7334b110f(): any;
 export declare function N_0x91c9e2a0f9dd6dd4(): any;
 export declare function N_0x9f6dcd0c939c71e9(): any;
-export declare function N_0xa31dafcdc33775e9(): any;
 export declare function N_0xb4411d4d6b81438e(): any;
 export declare function N_0xc8fc3b2432e8229d(): any;
 export declare function N_0xcbf743c984695cf3(): any;

@@ -15,6 +15,7 @@ export declare function RemoveScriptFire(fireHandle: number): void;
 export declare function StartEntityFire(p0: any, p1: any, p2: any, p3: any): void;
 export declare function StartScriptFire(x: number, y: number, z: number, p3: number, p4: number, p5: boolean, soundsetName: string, p7: number, p8: number): number;
 export declare function StopEntityFire(p0: any, p1: any): void;
+export declare function StopFireInBox(posX: number, posY: number, posZ: number, rotX: number, rotY: number, rotZ: number, scaleX: number, scaleY: number, scaleZ: number): void;
 export declare function StopFireInRange(x: number, y: number, z: number, radius: number): void;
 // Hash functions
 export declare function N_0x24db6b9f2b719043(p0: any): void;
@@ -25,6 +26,5 @@ export declare function N_0x68f6a75fdf5a70d6(p0: any, p1: any, p2: any, p3: any)
 export declare function N_0x754937c28271bc65(p0: any): void;
 export declare function N_0xa4454592dcf7c992(p0: any): any;
 export declare function N_0xab7993ba61a4674f(p0: any, p1: any): any;
-export declare function N_0xb7c7bdc375aea9a4(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any): void;
 export declare function N_0xb7df150605eedc9b(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any): void;
 export declare function N_0xcdc25355c0d65963(p0: any): any;

@@ -4,6 +4,8 @@ export declare function CreateHerd(): number;
 export declare function GetAnimalTuningBoolParam(animal: number, p1: number): boolean;
 export declare function GetAnimalTuningFloatParam(animal: number, p1: number): number;
 export declare function GetSpeciesTuningFloatParam(p0: string | number, p1: number, p2: number): number;
+export declare function ResetAnimalTuningBoolParam(p0: any, p1: any): void;
+export declare function ResetAnimalTuningFloatParam(p0: any, p1: any): void;
 export declare function SetAnimalTuningBoolParam(animal: number, p1: number, p2: boolean): void;
 export declare function SetAnimalTuningFloatParam(animal: number, p1: number, p2: number): void;
 export declare function SetSpeciesTuningBoolParam(p0: string | number, p1: number, p2: number, p3: boolean): void;

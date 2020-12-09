@@ -9,6 +9,7 @@ export declare function GetEntitiesFromPropset(propSet: number, itemSet: number,
 export declare function HasPropsetLoaded(hash: string | number): boolean;
 export declare function HasPropsetLoaded2(hash: string | number): boolean;
 export declare function ReleasePropset(hash: string | number): boolean;
+export declare function RemoveVehiclePropsets(vehicle: number): void;
 export declare function RequestPropset(hash: string | number): boolean;
 export declare function RequestPropset2(hash: string | number): boolean;
 export declare function SetPropsetAsNoLongerNeeded(propSet: number): void;
@@ -17,7 +18,6 @@ export declare function N_0x0790473eee1977d3(p0: any): any;
 export declare function N_0x0ce8aafe9e433a23(p0: any): any;
 export declare function N_0x155b2fbe72d7d1d0(p0: any): any;
 export declare function N_0x36f69e7a22655653(p0: any): any;
-export declare function N_0x3bcf32ff37ea9f1d(p0: any): void;
 export declare function N_0x53784cea0159439b(p0: any): any;
 export declare function N_0x58e0b01d45ca7357(p0: any): void;
 export declare function N_0x72068021f498e6e3(p0: any, p1: any, p2: any, p3: any): any;

@@ -1,6 +1,7 @@
 // Named functions
 export declare function ActivatePhysics(entity: number): void;
 export declare function AddRope(x: number, y: number, z: number, rotX: number, rotY: number, rotZ: number, length: number, ropeType: number, maxLength: number, minLength: number, p10: boolean, p11: boolean, p12: boolean, rigid: boolean, p14: number, breakWhenShot: boolean, p17: boolean): [number, any];
+export declare function AddRope2(x: number, y: number, z: number, rotX: number, rotY: number, rotZ: number, length: number, ropeType: number, isNetworked: boolean, p9: number, p10: number): number;
 export declare function AttachEntitiesToRope(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any, p10: any, p11: any, p12: any, p13: any, p14: any, p15: any, p16: any, p17: any, p18: any, p19: any, p20: any): void;
 export declare function BreakEntityGlass(entity: number, p1: number, p2: number, p3: number, p4: number, p5: number, p6: number, p7: number, p8: number, p9: any, p10: boolean): void;
 export declare function DeleteChildRope(ropeId: number): void;
@@ -64,9 +65,9 @@ export declare function N_0xc89e7410a93ac19a(p0: any, p1: any): void;
 export declare function N_0xd699e688b49c0fd2(p0: any, p1: any, p2: any, p3: any, p4: any): void;
 export declare function N_0xdede679ed29dd4e7(p0: any, p1: any): void;
 export declare function N_0xe54bf2ce6c7d23a9(p0: any, p1: any, p2: any, p3: any, p4: any): void;
-export declare function N_0xe9c59f6809373a99(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any, p10: any): any;
 export declare function N_0xe9cd9a67834985a7(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any, p10: any): void;
 export declare function N_0xeaf529446488eb18(p0: any): void;
+export declare function N_0xee360cfc80c8b2bc(p0: any): any;
 export declare function N_0xf1ea2a881eb7f2cd(p0: any, p1: any): void;
 export declare function N_0xf27f1a8de4f50a1b(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any): void;
 export declare function N_0xf8ca39d5c0d1d9a1(p0: any, p1: any): void;

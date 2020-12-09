@@ -11,6 +11,7 @@ export declare function N_0x0fd07141ad048aae(p0: any, p1: any): any;
 export declare function N_0x18d6869fbffec0f8(p0: any, p1: any, p2: any, p3: any): any;
 export declare function N_0x2024f4f333095fb1(p0: any, p1: any, p2: any): any;
 export declare function N_0x2f901291ef177b02(p0: any, p1: any): void;
+export declare function N_0x38838a646fb30aae(p0: any, p1: any, p2: any, p3: any, p4: any): any;
 export declare function N_0x3f9fddba79117c69(p0: any, p1: any, p2: any, p3: any): any;
 export declare function N_0x4e88a65968a55c78(p0: any, p1: any): any;
 export declare function N_0x59fa676177dbe4c9(p0: any): any;
