@@ -4,7 +4,7 @@ import * as nativesJson from './natives.json';
 import { EOL } from 'os';
 import * as fs from 'fs-extra';
 
-const reserwedKeywords: Array<string> = [
+const reservedKeywords: Array<string> = [
     'break',
     'case',
     'catch',
@@ -64,7 +64,7 @@ function capitalize(s: string): string {
 }
 
 function safeVarName(s: string): string {
-    if (reserwedKeywords.includes(s)) {
+    if (reservedKeywords.includes(s)) {
         return `a${capitalize(s)}`;
     }
     return s;
@@ -269,6 +269,10 @@ describe('Module declaration generator',
             const ns = "FIRE";
             moduleDeclaration(ns, "./out/Fire.module.ts");
         });
+        it('gang', () => {
+            const ns = "GANG";
+            moduleDeclaration(ns, "./out/Gang.module.ts");
+        });
         it('googleanalytics', () => {
             const ns = "GOOGLE_ANALYTICS";
             moduleDeclaration(ns, "./out/GoogleAnalytics.module.ts");
@@ -336,6 +340,10 @@ describe('Module declaration generator',
         it('network', () => {
             const ns = "NETWORK";
             moduleDeclaration(ns, "./out/Network.module.ts");
+        });
+        it('persistence', () => {
+            const ns = "PERSISTENCE";
+            moduleDeclaration(ns, "./out/Persistence.module.ts");
         });
         it('object', () => {
             const ns = "OBJECT";
@@ -441,6 +449,10 @@ describe('Module declaration generator',
             const ns = "UIEVENTS";
             moduleDeclaration(ns, "./out/UiEvents.module.ts");
         });
+        it('uifeed', () => {
+            const ns = "UIFEED";
+            moduleDeclaration(ns, "./out/UiFeed.module.ts");
+        });
         it('uitutorial', () => {
             const ns = "UITUTORIAL";
             moduleDeclaration(ns, "./out/UiTutorial.module.ts");
@@ -449,6 +461,10 @@ describe('Module declaration generator',
             const ns = "UISTATEMACHINE";
             moduleDeclaration(ns, "./out/UiStateMachine.module.ts");
         });
+        it('uipinning', () => {
+            const ns = "UIPINNING";
+            moduleDeclaration(ns, "./out/UiPinning.module.ts");
+        });
         it('uilog', () => {
             const ns = "UILOG";
             moduleDeclaration(ns, "./out/UiLog.module.ts");
@@ -456,6 +472,10 @@ describe('Module declaration generator',
         it('unlock', () => {
             const ns = "UNLOCK";
             moduleDeclaration(ns, "./out/Unlock.module.ts");
+        });
+        it('voice', () => {
+            const ns = "VOICE";
+            moduleDeclaration(ns, "./out/Voice.module.ts");
         });
         it('volume', () => {
             const ns = "VOLUME";
@@ -481,10 +501,6 @@ describe('Module declaration generator',
             const ns = "_NAMESPACE29";
             moduleDeclaration(ns, "./out/Namespace29.module.ts");
         });
-        it('namespace26', () => {
-            const ns = "_NAMESPACE26";
-            moduleDeclaration(ns, "./out/Namespace26.module.ts");
-        });
         it('namespace30', () => {
             const ns = "_NAMESPACE30";
             moduleDeclaration(ns, "./out/Namespace30.module.ts");
@@ -493,25 +509,13 @@ describe('Module declaration generator',
             const ns = "_NAMESPACE4";
             moduleDeclaration(ns, "./out/Namespace4.module.ts");
         });
-        it('namespace71', () => {
-            const ns = "_NAMESPACE71";
-            moduleDeclaration(ns, "./out/Namespace71.module.ts");
+        it('namespace70', () => {
+            const ns = "_NAMESPACE70";
+            moduleDeclaration(ns, "./out/Namespace70.module.ts");
         });
-        it('namespace49', () => {
-            const ns = "_NAMESPACE49";
-            moduleDeclaration(ns, "./out/Namespace49.module.ts");
-        });
-        it('namespace73', () => {
-            const ns = "_NAMESPACE73";
-            moduleDeclaration(ns, "./out/Namespace73.module.ts");
-        });
-        it('namespace76', () => {
-            const ns = "_NAMESPACE76";
-            moduleDeclaration(ns, "./out/Namespace76.module.ts");
-        });
-        it('namespace79', () => {
-            const ns = "_NAMESPACE79";
-            moduleDeclaration(ns, "./out/Namespace79.module.ts");
+        it('namespace77', () => {
+            const ns = "_NAMESPACE77";
+            moduleDeclaration(ns, "./out/Namespace77.module.ts");
         });
     }
 );
