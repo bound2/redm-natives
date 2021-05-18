@@ -33,7 +33,7 @@ export declare function StatIdSetFloat(value: number, p2: boolean): [boolean, an
 export declare function StatIdSetGxtLabel(p2: boolean): [boolean, any, string];
 export declare function StatIdSetInt(value: number, p2: boolean): [boolean, any];
 export declare function StatIdSetToPosseId(): any;
-export declare function StatPhotographTaken(itemset: ItemSet): void;
+export declare function StatPhotographTaken(itemset: number): void;
 export declare function StatRegisterLegendaryAnimalDeed(deedHash: string | number): void;
 export declare function StatstrackerDeedStarted(p0: string | number, p1: any): void;
 export declare function StatstrackerIsInitialized(p0: string | number): boolean;

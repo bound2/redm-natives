@@ -44,7 +44,7 @@ export declare function DoesGroupExist(groupId: number): boolean;
 export declare function DoesMetapedOutfitExistForPedModel(outfit: string | number, model: string | number): boolean;
 export declare function ExplodePedHead(ped: number, weaponHash: string | number): void;
 export declare function FadeAndDestroyPed(): number;
-export declare function FindAllAttachedCarriableEntities(ped: number, itemset: ItemSet): void;
+export declare function FindAllAttachedCarriableEntities(ped: number, itemset: number): void;
 export declare function ForcePedAiAndAnimationUpdate(ped: number, p1: boolean, p2: boolean): void;
 export declare function ForcePedMotionState(ped: number, motionStateHash: string | number, p2: boolean, p3: number, p4: boolean): boolean;
 export declare function FreezePedCameraRotation(ped: number): void;

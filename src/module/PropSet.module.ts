@@ -9,7 +9,7 @@ export declare function DoesPropSetExist(propSet: PropSet): boolean;
 export declare function DoesPropSetOfTypeExistNearCoords(propsetHash: string | number, x: number, y: number, z: number): boolean;
 export declare function DoesVehicleHaveAnyLightPropSet(vehicle: number): boolean;
 export declare function DoesVehicleHaveAnyPropSet(vehicle: number): boolean;
-export declare function GetEntitiesFromPropSet(propSet: PropSet, itemSet: ItemSet, p2: any, p3: boolean, p4: boolean): number;
+export declare function GetEntitiesFromPropSet(propSet: PropSet, itemSet: number, p2: any, p3: boolean, p4: boolean): number;
 export declare function GetPropSetAtCoords(propsetHash: string | number, x: number, y: number, z: number): PropSet;
 export declare function GetPropSetModel(propSet: PropSet): string | number;
 export declare function GetVehicleLightPropSet(vehicle: number): PropSet;

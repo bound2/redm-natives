@@ -22,7 +22,7 @@ export declare function CompareStrings(matchCase: boolean, maxLength: number): [
 export declare function CopyMemory(size: number): [any, any];
 export declare function CreateColorString(rgb: number): string;
 export declare function CreateIncident(dispatchService: number, x: number, y: number, z: number, numUnits: number, radius: number, p7: any, p8: any): [boolean, number];
-export declare function CreateIncidentWithEntities(dispatchService: number, x: number, y: number, z: number, itemSet: ItemSet, radius: number): [boolean, number];
+export declare function CreateIncidentWithEntities(dispatchService: number, x: number, y: number, z: number, itemSet: number, radius: number): [boolean, number];
 export declare function DeleteIncident(incidentId: number): void;
 export declare function DisplayOnscreenKeyboard(p0: number, maxInputLength: number): [string, string, string, string, string, string];
 export declare function DoesItemHaveValidBase(item: number): boolean;
