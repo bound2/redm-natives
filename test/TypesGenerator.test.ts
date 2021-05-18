@@ -1,4 +1,5 @@
 import 'mocha';
+import { assert } from 'chai';
 import * as nativesJson from './natives.json';
 
 import { EOL } from 'os';
@@ -173,6 +174,16 @@ function moduleDeclaration(ns: string, filepath: string): void {
     writeFn("// Hash functions");
     hashNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => writeFn(toDeclaration(n)));
 }
+
+describe('Modules',
+    () => {
+        it("count", () => {
+            const nsModules = Object.keys(nativesJson);
+            console.debug(nsModules.sort((a: string, b: string) => a.localeCompare(b)));
+            assert.equal(nsModules.length, 86);
+        });
+    }
+);
 
 describe('Module declaration generator',
     () => {
