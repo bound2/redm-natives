@@ -101,6 +101,7 @@ function type(t: string): string {
         case "Prompt":
         case "Interior":
         case "ItemSet":
+        case "PropSet":
             return "number";
         case "char":
         case "const char":
