@@ -141,7 +141,7 @@ function moduleDeclaration(ns: string, filepath: string): void {
         }
 
         const rFn = (p: Parameter): boolean => {
-            return p.type.endsWith("*") && p.type !== "char*" && p.type !== "void*";
+            return p.type.endsWith("*") && p.type !== "const char*" && p.type !== "void*";
         };
         // Gather returnable parameters
         const params: Array<Parameter> = nsJson[fn]["params"];

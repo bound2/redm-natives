@@ -6,9 +6,9 @@ export declare function ClearPlayerHasDamagedAtLeastOnePed(player: number): void
 export declare function ClearPlayerWantedLevel(player: number): void;
 export declare function DisablePlayerFiring(player: number, toggle: boolean): void;
 export declare function ForceCleanup(cleanupFlags: number): void;
-export declare function ForceCleanupForAllThreadsWithThisName(cleanupFlags: number): string;
+export declare function ForceCleanupForAllThreadsWithThisName(name: string, cleanupFlags: number): void;
 export declare function ForceCleanupForThreadWithThisId(id: number, cleanupFlags: number): void;
-export declare function FormatPlayerNameString(): [string, string];
+export declare function FormatPlayerNameString(string: string): string;
 export declare function GetCauseOfMostRecentForceCleanup(): number;
 export declare function GetDeadeyeAbilityLevel(player: number): number;
 export declare function GetDiscoverableNameHashAndTypeForEntity(p0: any, p1: any): any;

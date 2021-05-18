@@ -1,13 +1,13 @@
 // Named functions
-export declare function ActivateInteriorEntitySet(interior: number, p2: number): string;
+export declare function ActivateInteriorEntitySet(interior: number, entitySetName: string, p2: number): void;
 export declare function ClearRoomForEntity(entity: number): void;
 export declare function ClearRoomForGameViewport(): void;
-export declare function DeactivateInteriorEntitySet(interior: number, p2: boolean): string;
+export declare function DeactivateInteriorEntitySet(interior: number, entitySetName: string, p2: boolean): void;
 export declare function DisableInterior(interior: number, toggle: boolean): void;
 export declare function ForceRoomForEntity(entity: number, interior: number, roomHashKey: string | number): void;
 export declare function ForceRoomForGameViewport(interiorID: number, roomHashKey: string | number): void;
 export declare function GetInteriorAtCoords(x: number, y: number, z: number): number;
-export declare function GetInteriorAtCoordsWithType(x: number, y: number, z: number): [number, string];
+export declare function GetInteriorAtCoordsWithType(x: number, y: number, z: number, interiorType: string): number;
 export declare function GetInteriorAtCoordsWithTypehash(x: number, y: number, z: number, typeHash: string | number): number;
 export declare function GetInteriorFromCollision(x: number, y: number, z: number): number;
 export declare function GetInteriorFromEntity(entity: number): number;
@@ -18,8 +18,8 @@ export declare function GetInteriorPosition(interior: number): [number, number, 
 export declare function GetKeyForEntityInRoom(entity: number): string | number;
 export declare function GetRoomKeyFromEntity(entity: number): string | number;
 export declare function IsCollisionMarkedOutside(x: number, y: number, z: number): boolean;
-export declare function IsInteriorEntitySetActive(interior: number): [boolean, string];
-export declare function IsInteriorEntitySetValid(interior: number): [boolean, string];
+export declare function IsInteriorEntitySetActive(interior: number, entitySetName: string): boolean;
+export declare function IsInteriorEntitySetValid(interior: number, entitySetName: string): boolean;
 export declare function IsInteriorReady(interior: number): boolean;
 export declare function IsInteriorScene(): boolean;
 export declare function IsValidInterior(interior: number): boolean;
