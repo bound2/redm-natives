@@ -1,6 +1,6 @@
 // Named functions
 export declare function ActivateDamageTrackerOnNetworkId(netID: number, toggle: boolean): void;
-export declare function AnimSceneToNet(animScene: AnimScene): number;
+export declare function AnimSceneToNet(animScene: number): number;
 export declare function CanRegisterMissionEntities(ped_amt: number, vehicle_amt: number, object_amt: number, pickup_amt: number): boolean;
 export declare function CanRegisterMissionObjects(amount: number): boolean;
 export declare function CanRegisterMissionPeds(amount: number): boolean;
@@ -47,7 +47,7 @@ export declare function IsTimeMoreThan(timeA: number, timeB: number): boolean;
 export declare function KeepNetworkIdInFastInstance(netId: number, p1: boolean, p2: number): void;
 export declare function LocalPlayerPedshotTextureDownloadRequest(p0: number, p1: number): number;
 export declare function MugshotTextureDownloadRequest(p1: number, p3: boolean): [number, any, string];
-export declare function NetToAnimScene(netId: number): AnimScene;
+export declare function NetToAnimScene(netId: number): number;
 export declare function NetToEnt(netHandle: number): number;
 export declare function NetToObj(netHandle: number): Record<string, any>;
 export declare function NetToPed(netHandle: number): number;
@@ -144,7 +144,7 @@ export declare function NetworkGetUnreliableResendCountForPlayer(player: number)
 export declare function NetworkGetXp(): number;
 export declare function NetworkHandleFromFriend(friendIndex: number): any;
 export declare function NetworkHandleFromPlayer(player: number): any;
-export declare function NetworkHasControlOfAnimScene(animScene: AnimScene): boolean;
+export declare function NetworkHasControlOfAnimScene(animScene: number): boolean;
 export declare function NetworkHasControlOfEntity(entity: number): boolean;
 export declare function NetworkHasControlOfNetworkId(netId: number): boolean;
 export declare function NetworkHasControlOfPickup(pickup: number): boolean;
@@ -204,7 +204,7 @@ export declare function NetworkRegisterHostBroadcastVariables(p0: any, p1: any, 
 export declare function NetworkRegisterPlayerBroadcastVariables(p0: any, p1: any, p2: any): void;
 export declare function NetworkRemoveFriend(): [boolean, any];
 export declare function NetworkRequestCloudTunables(): void;
-export declare function NetworkRequestControlOfAnimScene(animScene: AnimScene): boolean;
+export declare function NetworkRequestControlOfAnimScene(animScene: number): boolean;
 export declare function NetworkRequestControlOfEntity(entity: number): boolean;
 export declare function NetworkRequestControlOfNetworkId(netId: number): boolean;
 export declare function NetworkRequestControlOfPickupPlacement(p0: any): boolean;

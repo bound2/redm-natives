@@ -91,6 +91,7 @@ function type(t: string): string {
         case "FireId":
         case "Blip":
         case "Pickup":
+        case "AnimScene":
             return "number";
         case "char":
         case "const char":
