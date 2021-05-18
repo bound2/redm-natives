@@ -12,7 +12,7 @@ export declare function MissiondataSetRatingScores(p0: any, p1: number, p2: numb
 export declare function MissiondataSetReplayLockedForCategory(p0: string | number, locked: boolean): void;
 export declare function MissiondataTimecycleBoxDelete(): void;
 export declare function MissiondataTimecycleBoxExists(): boolean;
-export declare function MissiondataTimecycleBoxSetModifier(): const char;
+export declare function MissiondataTimecycleBoxSetModifier(): string;
 export declare function MissiondataWasCompleted(p0: any): any;
 // Hash functions
 export declare function N_0xe145864decc34219(p0: any): any;

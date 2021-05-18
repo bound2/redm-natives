@@ -1,16 +1,16 @@
 // Named functions
 export declare function IsScInboxValid(p0: number): boolean;
 export declare function ScInboxGetTotalNumMessages(): number;
-export declare function ScInboxMessageGetDataInt(p0: number): [boolean, const char, number];
-export declare function ScInboxMessageGetDataString(p0: number, out: string): [boolean, const char];
-export declare function ScInboxMessageGetString(p0: number): const char;
+export declare function ScInboxMessageGetDataInt(p0: number): [boolean, string, number];
+export declare function ScInboxMessageGetDataString(p0: number, out: string): [boolean, string];
+export declare function ScInboxMessageGetString(p0: number): string;
 export declare function ScInboxMessageInit(p0: number): string | number;
 export declare function ScInboxMessagePop(p0: number): boolean;
 export declare function ScPresenceAttrSetFloat(attrHash: string | number, value: number): boolean;
-export declare function ScPresenceAttrSetFloatEx(value: number, p2: boolean): [boolean, const char];
-export declare function ScPresenceAttrSetIntEx(value: number, p2: boolean): [boolean, const char];
-export declare function ScPresenceAttrSetStringEx(p2: boolean): [boolean, const char, const char];
-export declare function ScProfanityCheckString(): [boolean, const char, number];
+export declare function ScPresenceAttrSetFloatEx(value: number, p2: boolean): [boolean, string];
+export declare function ScPresenceAttrSetIntEx(value: number, p2: boolean): [boolean, string];
+export declare function ScPresenceAttrSetStringEx(p2: boolean): [boolean, string, string];
+export declare function ScProfanityCheckString(): [boolean, string, number];
 export declare function ScProfanityGetCheckIsPending(token: number): boolean;
 export declare function ScProfanityGetCheckIsValid(token: number): boolean;
 export declare function ScProfanityGetStringPassed(token: number): boolean;

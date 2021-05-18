@@ -13,7 +13,7 @@ export declare function DatabindingAddDataInt(p0: any, p1: any, p2: any): any;
 export declare function DatabindingAddDataIntByHash(p0: any, p1: any, p2: any): any;
 export declare function DatabindingAddDataString(p0: any, p1: any, p2: any): any;
 export declare function DatabindingAddDataStringByHash(p0: any, p1: any, p2: any): any;
-export declare function DatabindingAddDataStringFromPath(): [any, const char, const char, const char];
+export declare function DatabindingAddDataStringFromPath(): [any, string, string, string];
 export declare function DatabindingAddHashArray(p0: any, p1: any): any;
 export declare function DatabindingAddStringArray(p0: any, p1: any): any;
 export declare function DatabindingAddUiItemList(p0: any, p1: any): any;

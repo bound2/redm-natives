@@ -33,9 +33,9 @@ export declare function GetWeaponComponentTypeModel(componentHash: string | numb
 export declare function GetWeaponDamage(weaponObject: Record<string, any>): number;
 export declare function GetWeaponDegradation(weaponObject: Record<string, any>): number;
 export declare function GetWeaponDirt(weaponObject: Record<string, any>): number;
-export declare function GetWeaponName(weaponHash: string | number): const char;
-export declare function GetWeaponName2(weaponHash: string | number): const char;
-export declare function GetWeaponNameWithPermanentDegradation(weaponHash: string | number, permanentDegradationLevel: number): const char;
+export declare function GetWeaponName(weaponHash: string | number): string;
+export declare function GetWeaponName2(weaponHash: string | number): string;
+export declare function GetWeaponNameWithPermanentDegradation(weaponHash: string | number, permanentDegradationLevel: number): string;
 export declare function GetWeaponPermanentDegradation(weaponObject: Record<string, any>): number;
 export declare function GetWeaponScale(weaponObject: Record<string, any>): number;
 export declare function GetWeaponSoot(weaponObject: Record<string, any>): number;

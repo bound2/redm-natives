@@ -1,27 +1,27 @@
 // Named functions
 export declare function UilogAddEntryHash(p0: number, p1: number, x: number, y: number, z: number, p5: string | number, p6: string | number, p7: any): void;
-export declare function UilogAddOrUpdateObjective(p0: number, p1: string | number, p2: string | number, p4: boolean, p5: boolean, p6: boolean): const char;
-export declare function UilogAddTotalTakeEntry(p0: string | number, p1: string | number, p4: string | number): [const char, const char];
+export declare function UilogAddOrUpdateObjective(p0: number, p1: string | number, p2: string | number, p4: boolean, p5: boolean, p6: boolean): string;
+export declare function UilogAddTotalTakeEntry(p0: string | number, p1: string | number, p4: string | number): [string, string];
 export declare function UilogClearAllEntries(): void;
 export declare function UilogClearCachedObjective(): void;
 export declare function UilogClearHasDisplayedCachedObjective(): void;
-export declare function UilogGetCachedObjective(): const char;
+export declare function UilogGetCachedObjective(): string;
 export declare function UilogHasDisplayedCachedObjective(): boolean;
 export declare function UilogIsEntryRegistered(p0: number, p1: string | number): boolean;
-export declare function UilogMarkAllEntriesAvailability(p0: number): const char;
-export declare function UilogMarkEntryAvailability(p0: number, p1: string | number, p2: number): const char;
+export declare function UilogMarkAllEntriesAvailability(p0: number): string;
+export declare function UilogMarkEntryAvailability(p0: number, p1: string | number, p2: number): string;
 export declare function UilogMarkMissionCompleted(p0: string | number): void;
 export declare function UilogPostNotification(): [number, any];
 export declare function UilogPrintCachedObjective(): void;
 export declare function UilogRemoveEntry(p0: number, p1: string | number): void;
-export declare function UilogSetCachedObjective(): const char;
+export declare function UilogSetCachedObjective(): string;
 export declare function UilogSetEntryBriefTexture(p0: number, p1: string | number, p2: string | number, p3: string | number): void;
 export declare function UilogSetEntryIconTexture(p0: number, p1: string | number, p2: string | number, p3: string | number): void;
 export declare function UilogSetEntryPinned(p0: number, p1: string | number, p2: boolean): void;
 export declare function UilogSetHasDisplayedCachedObjective(): void;
 export declare function UilogSetPendingDetailsId(p0: number, p1: string | number): any;
-export declare function UilogSetTotalTakeSummary(): [const char, const char];
-export declare function UilogUpdateEntrySubheader(p0: number, p1: string | number): const char;
+export declare function UilogSetTotalTakeSummary(): [string, string];
+export declare function UilogUpdateEntrySubheader(p0: number, p1: string | number): string;
 // Hash functions
 export declare function N_0x2a4765812202e671(): any;
 export declare function N_0x49c63fdf69744a27(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any): void;

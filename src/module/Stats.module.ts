@@ -30,7 +30,7 @@ export declare function StatIdIsValid(): [boolean, any];
 export declare function StatIdSetBool(value: boolean, p2: boolean): [boolean, any];
 export declare function StatIdSetDate(p2: boolean): [boolean, any, any];
 export declare function StatIdSetFloat(value: number, p2: boolean): [boolean, any];
-export declare function StatIdSetGxtLabel(p2: boolean): [boolean, any, const char];
+export declare function StatIdSetGxtLabel(p2: boolean): [boolean, any, string];
 export declare function StatIdSetInt(value: number, p2: boolean): [boolean, any];
 export declare function StatIdSetToPosseId(): any;
 export declare function StatPhotographTaken(itemset: ItemSet): void;

@@ -1,7 +1,7 @@
 // Named functions
 export declare function InventoryAreLocalChangesAllowed(inventoryId: number): boolean;
 export declare function InventoryCopyMpInventoryToMissionInventory(p0: boolean, p1: boolean, bCopySatchelItems: boolean, bCopyEmotes: boolean, bCopyHorse: boolean, p5: boolean): void;
-export declare function InventoryCreateItemCollection(inventoryId: number, slotId: string | number): [number, const char, number];
+export declare function InventoryCreateItemCollection(inventoryId: number, slotId: string | number): [number, string, number];
 export declare function InventoryCreateItemCollectionWithFilter(inventoryId: number): [number, any, number];
 export declare function InventoryDisableMissionInventoryPickups(): void;
 export declare function InventoryFitsSlotId(item: string | number, slotId: string | number): boolean;

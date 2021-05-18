@@ -28,8 +28,8 @@ export declare function GetNearestTrainTrackPosition(x: number, y: number, z: nu
 export declare function GetNumBreakableVehicleLockObjects(vehicle: number): number;
 export declare function GetPedInDraftSeat(vehicle: number, seatIndex: number): number;
 export declare function GetPedInVehicleSeat(vehicle: number, seatIndex: number): number;
-export declare function GetPositionOfVehicleRecordingAtTime(recording: number, time: number): [[number, number, number], const char];
-export declare function GetRotationOfVehicleRecordingAtTime(recording: number, time: number): [[number, number, number], const char];
+export declare function GetPositionOfVehicleRecordingAtTime(recording: number, time: number): [[number, number, number], string];
+export declare function GetRotationOfVehicleRecordingAtTime(recording: number, time: number): [[number, number, number], string];
 export declare function GetRowingOars(vehicle: number): [number, number];
 export declare function GetTimePositionInRecording(vehicle: number): number;
 export declare function GetTrainCarriage(train: number, trailerNumber: number): number;
@@ -49,7 +49,7 @@ export declare function GetVehicleTint(vehicle: number): number;
 export declare function GetVehicleTrailerVehicle(vehicle: number): [boolean, number];
 export declare function GetVehicleTurretSeat(vehicle: number): [boolean, number];
 export declare function HasVehicleAssetLoaded(vehicleAsset: number): boolean;
-export declare function HasVehicleRecordingBeenLoaded(recording: number): [boolean, const char];
+export declare function HasVehicleRecordingBeenLoaded(recording: number): [boolean, string];
 export declare function InstantlyFillVehiclePopulation(): void;
 export declare function IsAnyVehicleNearPoint(x: number, y: number, z: number, radius: number): boolean;
 export declare function IsDraftVehicle(vehicle: number): boolean;
@@ -79,7 +79,7 @@ export declare function RemoveVehiclesFromGeneratorsInArea(p0: any, p1: any, p2:
 export declare function RemoveVehicleWindow(vehicle: number, windowIndex: number): void;
 export declare function RequestVehicleAsset(vehicleHash: string | number, vehicleAsset: number): void;
 export declare function RequestVehicleHighDetailModel(vehicle: number): void;
-export declare function RequestVehicleRecording(recording: number): const char;
+export declare function RequestVehicleRecording(recording: number): string;
 export declare function ResetVehicleStuckTimer(vehicle: number, nullAttributes: number): void;
 export declare function SetAllVehicleGeneratorsActive(): void;
 export declare function SetAllVehicleGeneratorsActiveInArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, p6: boolean, p7: boolean): void;
@@ -167,7 +167,7 @@ export declare function SetVehicleWetLevel(vehicle: number, wetLevel: number): v
 export declare function SetVehicleWheelsCanBreak(vehicle: number, enabled: boolean): void;
 export declare function SetVehicleWheelsCanBreakOffWhenBlowUp(vehicle: number, toggle: boolean): void;
 export declare function SkipTimeInPlaybackRecordedVehicle(vehicle: number, time: number): void;
-export declare function StartPlaybackRecordedVehicle(vehicle: number, recording: number, p3: boolean): const char;
+export declare function StartPlaybackRecordedVehicle(vehicle: number, recording: number, p3: boolean): string;
 export declare function StartVehicleHorn(vehicle: number, duration: number, mode: string | number, forever: boolean): void;
 export declare function StopPlaybackRecordedVehicle(vehicle: number): void;
 export declare function TrackVehicleVisibility(vehicle: number): void;

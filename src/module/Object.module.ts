@@ -31,7 +31,7 @@ export declare function GetObjectOffsetFromCoords(xPos: number, yPos: number, zP
 export declare function GetPickupCoords(pickup: number): [number, number, number];
 export declare function GetPickupHash(pickupHash: string | number): string | number;
 export declare function GetPickupObject(pickup: number): Record<string, any>;
-export declare function GetRayfireMapObject(x: number, y: number, z: number, radius: number): [Record<string, any>, const char];
+export declare function GetRayfireMapObject(x: number, y: number, z: number, radius: number): [Record<string, any>, string];
 export declare function GetRayfireMapObjectAnimPhase(object: Record<string, any>): number;
 export declare function GetSafePickupCoords(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): [number, number, number];
 export declare function GetStateOfRayfireMapObject(object: Record<string, any>): number;

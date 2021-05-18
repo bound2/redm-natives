@@ -93,6 +93,7 @@ function type(t: string): string {
         case "Pickup":
             return "number";
         case "char":
+        case "const char":
             return "string";
         case "Hash":
             return "string | number";

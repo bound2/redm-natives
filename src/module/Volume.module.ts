@@ -5,11 +5,11 @@ export declare function AddSphereVolumeToVolumeAggregate(aggregate: Volume, p1: 
 export declare function AddVolumeToVolumeAggregate(aggregate: Volume, typeHash: string | number, p2: number, p3: number, p4: number, p5: number, p6: number, p7: number, p8: number, p9: number, p10: number): void;
 export declare function CreateSpeedVolume(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any, p10: any, p11: any, p12: any, p13: any, p14: any): Volume;
 export declare function CreateVolumeAggregate(): Volume;
-export declare function CreateVolumeAggregateWithCustomName(): [Volume, const char];
+export declare function CreateVolumeAggregateWithCustomName(): [Volume, string];
 export declare function CreateVolumeBox(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any): Volume;
 export declare function CreateVolumeBoxWithCustomName(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any): Volume;
 export declare function CreateVolumeByHash(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any): Volume;
-export declare function CreateVolumeByHashWithCustomName(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any): [Volume, const char];
+export declare function CreateVolumeByHashWithCustomName(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any): [Volume, string];
 export declare function CreateVolumeCylinder(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any): Volume;
 export declare function CreateVolumeCylinderWithCustomName(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any): Volume;
 export declare function CreateVolumeSphere(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any): Volume;

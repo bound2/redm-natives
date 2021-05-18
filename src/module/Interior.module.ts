@@ -1,13 +1,13 @@
 // Named functions
-export declare function ActivateInteriorEntitySet(interior: Interior, p2: number): const char;
+export declare function ActivateInteriorEntitySet(interior: Interior, p2: number): string;
 export declare function ClearRoomForEntity(entity: number): void;
 export declare function ClearRoomForGameViewport(): void;
-export declare function DeactivateInteriorEntitySet(interior: Interior, p2: boolean): const char;
+export declare function DeactivateInteriorEntitySet(interior: Interior, p2: boolean): string;
 export declare function DisableInterior(interior: Interior, toggle: boolean): void;
 export declare function ForceRoomForEntity(entity: number, interior: Interior, roomHashKey: string | number): void;
 export declare function ForceRoomForGameViewport(interiorID: number, roomHashKey: string | number): void;
 export declare function GetInteriorAtCoords(x: number, y: number, z: number): Interior;
-export declare function GetInteriorAtCoordsWithType(x: number, y: number, z: number): [Interior, const char];
+export declare function GetInteriorAtCoordsWithType(x: number, y: number, z: number): [Interior, string];
 export declare function GetInteriorAtCoordsWithTypehash(x: number, y: number, z: number, typeHash: string | number): Interior;
 export declare function GetInteriorFromCollision(x: number, y: number, z: number): number;
 export declare function GetInteriorFromEntity(entity: number): Interior;
@@ -18,8 +18,8 @@ export declare function GetInteriorPosition(interior: Interior): [number, number
 export declare function GetKeyForEntityInRoom(entity: number): string | number;
 export declare function GetRoomKeyFromEntity(entity: number): string | number;
 export declare function IsCollisionMarkedOutside(x: number, y: number, z: number): boolean;
-export declare function IsInteriorEntitySetActive(interior: Interior): [boolean, const char];
-export declare function IsInteriorEntitySetValid(interior: Interior): [boolean, const char];
+export declare function IsInteriorEntitySetActive(interior: Interior): [boolean, string];
+export declare function IsInteriorEntitySetValid(interior: Interior): [boolean, string];
 export declare function IsInteriorReady(interior: Interior): boolean;
 export declare function IsInteriorScene(): boolean;
 export declare function IsValidInterior(interior: Interior): boolean;
