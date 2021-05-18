@@ -116,7 +116,7 @@ export declare function PauseDeathArrestRestart(toggle: boolean): void;
 export declare function PopulateNow(): void;
 export declare function QueueSavegameOperation(p0: number): boolean;
 export declare function ReadIntAsFloat(value: number): number;
-export declare function RegisterInteractionLockonPrompt(entity: number, p2: number, p3: number, p4: number, p5: number, p6: number, prompt: Prompt, p8: boolean, p9: number): [boolean, string];
+export declare function RegisterInteractionLockonPrompt(entity: number, p2: number, p3: number, p4: number, p5: number, p6: number, prompt: number, p8: boolean, p9: number): [boolean, string];
 export declare function RemoveDispatchSpawnBlockingArea(p0: any): void;
 export declare function RemovePopMultiplierArea(id: number, p1: boolean): void;
 export declare function RemoveStealthKill(hash: string | number, p1: boolean): void;

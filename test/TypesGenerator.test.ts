@@ -98,6 +98,7 @@ function type(t: string): string {
         case "Pickup":
         case "AnimScene":
         case "Volume":
+        case "Prompt":
             return "number";
         case "char":
         case "const char":
