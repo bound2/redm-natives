@@ -28,7 +28,7 @@ export declare function IsVolumeLockRequestValid(volLockRequestId: number): bool
 export declare function RequestVolumeLock(x: number, y: number, z: number, radius: number, p4: number, p5: number): number;
 export declare function RequestVolumeLockWithArgs(): [number, any];
 export declare function SetVolumeCoords(volume: number, posX: number, posY: number, posZ: number): boolean;
-export declare function SetVolumeOwnerPersistentCharacter(volume: number, persChar: PersChar, p2: boolean): void;
+export declare function SetVolumeOwnerPersistentCharacter(volume: number, persChar: number, p2: boolean): void;
 export declare function SetVolumeRotation(volume: number, rotX: number, rotY: number, rotZ: number): boolean;
 export declare function SetVolumeScale(volume: number, scaleX: number, scaleY: number, scaleZ: number): boolean;
 // Hash functions
