@@ -5,6 +5,7 @@ export declare function AddOwnedExplosion(ped: number, x: number, y: number, z: 
 export declare function GetClosestFirePos(x: number, y: number, z: number): [boolean, [number, number, number]];
 export declare function GetEntityInsideExplosionArea(explosionType: number, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, radius: number): number;
 export declare function GetNumberOfFiresInRange(x: number, y: number, z: number, radius: number): number;
+export declare function IsEntityConsumedByFire(entity: number): boolean;
 export declare function IsEntityOnFire(entity: number): boolean;
 export declare function IsExplosionActiveInArea(explosionType: number, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
 export declare function IsExplosionInAngledArea(explosionType: number, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, angle: number): boolean;
@@ -27,4 +28,3 @@ export declare function N_0x754937c28271bc65(p0: any): void;
 export declare function N_0xa4454592dcf7c992(p0: any): any;
 export declare function N_0xab7993ba61a4674f(p0: any, p1: any): any;
 export declare function N_0xb7df150605eedc9b(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any): void;
-export declare function N_0xcdc25355c0d65963(p0: any): any;

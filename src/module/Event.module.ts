@@ -1,6 +1,7 @@
 // Named functions
 export declare function AddShockingEventAtPosition(eventType: string | number, x: number, y: number, z: number, p4: number, p5: number, p6: number, p7: number, p8: number, p9: number, p10: number): number;
 export declare function AddShockingEventForEntity(eventType: string | number, entity: number, p2: number, p3: number, p4: number, p5: number, p6: number, p7: number, p8: boolean, p9: boolean, p10: number, p11: number): number;
+export declare function CreateShockingEvent(): [number, any];
 export declare function IsShockingEventInSphere(eventType: string | number, x: number, y: number, z: number, radius: number): boolean;
 export declare function RemoveAllShockingEvents(p0: boolean): void;
 export declare function RemoveAllShockingEventsInArea(x: number, y: number, z: number, radius: number, p4: boolean): void;
@@ -35,6 +36,5 @@ export declare function N_0xad8f2424c6e1e3a8(p0: any): void;
 export declare function N_0xb6f4825153920582(): void;
 export declare function N_0xbb1e41dd3d3c6250(p0: any, p1: any, p2: any): void;
 export declare function N_0xc6a7dc546e94fed5(p0: any, p1: any, p2: any, p3: any): any;
-export declare function N_0xca1315c33b9a2847(p0: any): any;
 export declare function N_0xe28d7fc9fd32abeb(p0: any, p1: any, p2: any): void;
 export declare function N_0xe2c2fbb7825ffc66(): void;

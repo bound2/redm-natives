@@ -2,6 +2,8 @@
 export declare function ClearSpawnerInfoPriority(p0: string | number, p1: string | number): void;
 export declare function CreatePopzoneFromVolume(volume: number): number;
 export declare function DeleteScriptPopzone(popZone: number): void;
+export declare function DisableAmbientRoadPopulation(unk: boolean): void;
+export declare function EnableAmbientRoadPopulation(): void;
 export declare function GetNumModelsInPopulationSet(popSetHash: string | number): number;
 export declare function GetPedModelNameInPopulationSet(popSetHash: string | number, index: number): string | number;
 export declare function GetRandomModelFromPopulationSet(popSetHash: string | number, flags: number, p2: string | number, p3: boolean, p4: boolean, x: number, y: number, z: number): string | number;
@@ -24,9 +26,7 @@ export declare function N_0x7e6bc0b94f5928f0(popZone: number, p1: number, p2: nu
 export declare function N_0x8ec7cd701f872f87(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): void;
 export declare function N_0xa1cfb35069d23c23(p0: any): void;
 export declare function N_0xb56d41a694e42e86(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any): void;
-export declare function N_0xbc90bdf4e5228ea1(): void;
 export declare function N_0xc4533e3e87125c9e(p0: any): void;
-export declare function N_0xc6dcc2a3a8825c85(p0: any): void;
 export declare function N_0xdbbf12ea7c1029b2(p0: any, p1: any): void;
 export declare function N_0xec116edb683ad479(p0: any): void;
 export declare function N_0xf45e46deecf7df6e(p0: any, p1: any, p2: any, p3: any, p4: any): void;

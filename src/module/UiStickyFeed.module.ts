@@ -1,6 +1,6 @@
 // Named functions
+export declare function UiStickyFeedClearMessage(msgId: number): void;
 // Hash functions
-export declare function N_0x00a15b94cba4f76f(p0: any): void;
 export declare function N_0x07954320d77f6a3d(p0: any): any;
 export declare function N_0x339e16b41780fc35(p0: any, p1: any, p2: any): any;
 export declare function N_0x815c4065ae6e6071(p0: any, p1: any, p2: any): any;

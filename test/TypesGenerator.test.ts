@@ -1,4 +1,5 @@
 import 'mocha';
+import { assert } from 'chai';
 import * as nativesJson from './natives.json';
 
 import { EOL } from 'os';
@@ -67,6 +68,9 @@ function safeVarName(s: string): string {
     if (reservedKeywords.includes(s)) {
         return `a${capitalize(s)}`;
     }
+    if (s === "...") {
+        return `${s}args`;
+    }
     return s;
 }
 
@@ -75,6 +79,8 @@ function type(t: string): string {
         t = t.slice(0, -1);
     }
     switch (t) {
+        case "":
+            return "any[]";
         case "Any":
             return "any";
         case "BOOL":
@@ -90,8 +96,17 @@ function type(t: string): string {
         case "FireId":
         case "Blip":
         case "Pickup":
+        case "AnimScene":
+        case "Volume":
+        case "Prompt":
+        case "Interior":
+        case "ItemSet":
+        case "PropSet":
+        case "PersChar":
+        case "PopZone":
             return "number";
         case "char":
+        case "const char":
             return "string";
         case "Hash":
             return "string | number";
@@ -114,23 +129,26 @@ function moduleDeclaration(ns: string, filepath: string): void {
     const namedNatives: Array<Generatable> = new Array<Generatable>();
     for (const fn of nsFns) {
         // Construct native function name that's invokable from JS
-        let name = nsJson[fn].name;
-        const hashNative = !name;
+        let name: string = nsJson[fn].name;
+        const hashNative = name.startsWith("_0x");
         if (hashNative) {
-            name = `N_${nsJson[fn]["hash"].toLowerCase()}`;
+            name = `N_${fn.toLowerCase()}`;
         } else {
-            name = name.split("_").filter((p) => p).map((p) => capitalize(p)).reduce((a, b) => a + b);
+            name = name.split("_")
+                .filter((p: string) => p)
+                .map((p: string) => capitalize(p))
+                .reduce((a: string, b: string) => a + b);
         }
 
         const rFn = (p: Parameter): boolean => {
-            return p.type.endsWith("*") && p.type !== "char*" && p.type !== "void*";
+            return p.type.endsWith("*") && p.type !== "const char*" && p.type !== "void*";
         };
         // Gather returnable parameters
         const params: Array<Parameter> = nsJson[fn]["params"];
         const returnParams: Array<string> = params
             .filter((p) => rFn(p))
             .map((p) => type(p.type));
-        let returnTypes: Array<string> = [type(nsJson[fn].results)].concat(returnParams);
+        let returnTypes: Array<string> = [type(nsJson[fn].return_type)].concat(returnParams);
         // Fix issue where sometimes it has return type marked as void but has references returned
         if (returnTypes.length > 1) {
             returnTypes = returnTypes.filter((r) => r !== "void");
@@ -170,6 +188,16 @@ function moduleDeclaration(ns: string, filepath: string): void {
     writeFn("// Hash functions");
     hashNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => writeFn(toDeclaration(n)));
 }
+
+describe('Modules',
+    () => {
+        it("count", () => {
+            const nsModules = Object.keys(nativesJson);
+            console.debug(nsModules.sort((a: string, b: string) => a.localeCompare(b)));
+            assert.equal(nsModules.length, 86);
+        });
+    }
+);
 
 describe('Module declaration generator',
     () => {
@@ -497,9 +525,9 @@ describe('Module declaration generator',
             const ns = "ZONE";
             moduleDeclaration(ns, "./out/Zone.module.ts");
         });
-        it('namespace29', () => {
-            const ns = "_NAMESPACE29";
-            moduleDeclaration(ns, "./out/Namespace29.module.ts");
+        it('ik', () => {
+            const ns = "IK";
+            moduleDeclaration(ns, "./out/Ik.module.ts");
         });
         it('namespace30', () => {
             const ns = "_NAMESPACE30";
@@ -513,9 +541,9 @@ describe('Module declaration generator',
             const ns = "_NAMESPACE70";
             moduleDeclaration(ns, "./out/Namespace70.module.ts");
         });
-        it('namespace77', () => {
-            const ns = "_NAMESPACE77";
-            moduleDeclaration(ns, "./out/Namespace77.module.ts");
+        it('uistickyfeed', () => {
+            const ns = "UISTICKYFEED";
+            moduleDeclaration(ns, "./out/UiStickyFeed.module.ts");
         });
     }
 );

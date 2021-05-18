@@ -1,7 +1,7 @@
 // Named functions
 export declare function AddNavmeshBlockingObject(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number, p6: number, p7: boolean, p8: any): any;
 export declare function AddNavmeshRequiredRegion(x: number, y: number, radius: number): void;
-export declare function ArePathNodesLoadedInArea(x1: number, y1: number, x2: number, y2: number): boolean;
+export declare function AreNodesLoadedForArea(x1: number, y1: number, x2: number, y2: number): boolean;
 export declare function DoesNavmeshBlockingObjectExist(p0: any): boolean;
 export declare function GetClosestRoad(x: number, y: number, z: number, p3: number, p4: number, p10: boolean): [any, [number, number, number], [number, number, number], any, any, number];
 export declare function GetClosestVehicleNode(x: number, y: number, z: number, nodeType: number, p5: number, p6: number): [boolean, [number, number, number]];
@@ -21,6 +21,7 @@ export declare function GetVehicleNodePosition(nodeId: number): [number, number,
 export declare function IsNavmeshLoadedInArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
 export declare function IsPointOnRoad(x: number, y: number, z: number, vehicle: number): boolean;
 export declare function IsVehicleNodeIdValid(vehicleNodeId: number): boolean;
+export declare function NavmeshRequestPath(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any): any;
 export declare function RemoveNavmeshBlockingObject(p0: any): void;
 export declare function SetAmbientPedRangeMultiplierThisFrame(multiplier: number): void;
 export declare function SetIgnoreNoGpsFlag(toggle: boolean): void;
@@ -30,6 +31,7 @@ export declare function SetRoadsBackToOriginal(p0: any, p1: any, p2: any, p3: an
 export declare function SetRoadsBackToOriginalInAngledArea(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any): void;
 export declare function SetRoadsInAngledArea(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any, p10: any): void;
 export declare function SetRoadsInArea(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any): void;
+export declare function SetRoadsInVolume(volume: number, p1: boolean, p2: boolean, p3: boolean): void;
 export declare function SimulatedRouteGetEta(p0: any): number;
 export declare function SimulatedRouteIsLoaded(p0: any): boolean;
 export declare function SimulatedRouteTravelToPoint(p0: any, p1: number, p2: number): void;
@@ -39,7 +41,6 @@ export declare function N_0x07fb139b592fa687(p0: number, p1: number, p2: number,
 export declare function N_0x19c7567d2f2287d6(p0: any, p1: any): any;
 export declare function N_0x264e9a5cd78c338f(p0: any): void;
 export declare function N_0x2c87c3e1c7b96ee2(p0: any): void;
-export declare function N_0x348f211ca2404039(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any): any;
 export declare function N_0x34c9af25649172d0(p0: any): void;
 export declare function N_0x3a0f82f6ee2291c8(p0: any): any;
 export declare function N_0x430f8319ae56c8a9(p0: any, p1: any): [number, number, number];
@@ -65,7 +66,6 @@ export declare function N_0xa33914b00ca55756(p0: string, p1: number): any;
 export declare function N_0xa3791b915b8b84c6(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): void;
 export declare function N_0xafe2ae66f6251c66(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any): void;
 export declare function N_0xb03944057fd735ba(p0: any, p1: any, p2: any): void;
-export declare function N_0xc1799fafd2fdf52b(p0: any, p1: any, p2: any, p3: any): void;
 export declare function N_0xca27a86caa4e98ed(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any): any;
 export declare function N_0xcf213a5fc3abfc08(p0: any, p1: any, p2: any): void;
 export declare function N_0xd17672447692478e(p0: any, p1: any): void;

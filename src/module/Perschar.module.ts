@@ -1,5 +1,7 @@
 // Named functions
 export declare function CreatePersistentCharacter(hash: string | number): number;
+export declare function IsPersistentCharacterDead(persChar: number): boolean;
+export declare function IsPersistentCharacterValid(persChar: number): boolean;
 // Hash functions
 export declare function N_0x08fc896d2cb31fcc(p0: any, p1: any): any;
 export declare function N_0x0b3a99ab6713aa52(p0: any): void;
@@ -24,7 +26,6 @@ export declare function N_0x6759bee6762e140b(p0: any): void;
 export declare function N_0x69786495c92a3044(p0: any): any;
 export declare function N_0x70605812abc9ff0f(p0: any, p1: any): void;
 export declare function N_0x7b204f88f6c3d287(p0: any): void;
-export declare function N_0x800df3fc913355f3(p0: any): any;
 export declare function N_0x8ae4efa464dae42d(p0: any, p1: any): void;
 export declare function N_0x8b44273a92cd406c(p0: any): void;
 export declare function N_0x8bc555034a5a5e8c(p0: any, p1: any): void;
@@ -45,7 +46,6 @@ export declare function N_0xd95d777f828b2bbb(p0: any): void;
 export declare function N_0xdc9655d47dec0353(p0: any): any;
 export declare function N_0xe0e65e0d261f7507(p0: any): void;
 export declare function N_0xe4c51a8a3bd1664c(p0: any): any;
-export declare function N_0xeb98b38ca60742d7(p0: any): any;
 export declare function N_0xec254c2c9b0f08f1(p0: any, p1: any): any;
 export declare function N_0xefc5c6670e0b99ba(): void;
 export declare function N_0xf8de7154f7d1458f(p0: any): any;

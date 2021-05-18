@@ -5,6 +5,8 @@ export declare function ShowNotification(p2: number, p3: number): [any, any, any
 export declare function ShowObjective(p2: number): [any, any, any];
 export declare function ShowSimpleRightText(p2: number): [any, any, any];
 export declare function ShowTooltip(p2: number): [any, any, any];
+export declare function UiFeedClearChannel(p0: any, p1: any, p2: any): void;
+export declare function UiFeedGetCurrentMessage(p0: number): number;
 // Hash functions
 export declare function N_0x02bcc0fe9eba3529(p0: any, p1: any, p2: any, p3: any, p4: any): any;
 export declare function N_0x0fd07141ad048aae(p0: any, p1: any): any;
@@ -24,6 +26,4 @@ export declare function N_0xa6f4216ab10eb08e(p0: any, p1: any, p2: any, p3: any)
 export declare function N_0xaff5be9ba496ce40(p0: any, p1: any, p2: any, p3: any, p4: any): any;
 export declare function N_0xb249ebcb30dd88e0(p0: any, p1: any, p2: any): any;
 export declare function N_0xb7223b91cd6b7e07(p0: any): any;
-export declare function N_0xc17f69e1418cd11f(p0: any): any;
 export declare function N_0xc48152bc6b3e821c(p0: any, p1: any, p2: any): any;
-export declare function N_0xdd1232b332cbb9e7(p0: any, p1: any, p2: any): void;

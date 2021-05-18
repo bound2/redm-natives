@@ -2,7 +2,7 @@
 export declare function IsScInboxValid(p0: number): boolean;
 export declare function ScInboxGetTotalNumMessages(): number;
 export declare function ScInboxMessageGetDataInt(p0: number, context: string): [boolean, number];
-export declare function ScInboxMessageGetDataString(p0: number, context: string, out: string): boolean;
+export declare function ScInboxMessageGetDataString(p0: number, context: string): [boolean, string];
 export declare function ScInboxMessageGetString(p0: number): string;
 export declare function ScInboxMessageInit(p0: number): string | number;
 export declare function ScInboxMessagePop(p0: number): boolean;

@@ -19,7 +19,8 @@ export declare function IsDisabledControlPressed(padIndex: number, control: stri
 export declare function IsLookInverted(): boolean;
 export declare function IsUsingKeyboard(padIndex: number): boolean;
 export declare function SetControlContext(p0: number, context: string | number): void;
-export declare function SetControlGroupColor(padIndex: number, red: number, green: number, blue: number): void;
+export declare function SetControlLightEffectColor(padIndex: number, red: number, green: number, blue: number): void;
+export declare function SetControlLightEffectFlashingColor(p0: any, p1: any, p2: any, p3: any): void;
 export declare function SetControlNormal(padIndex: number, control: string | number, amount: number): boolean;
 export declare function SetInputExclusive(padIndex: number, control: string | number): void;
 export declare function SetPadShake(padIndex: number, duration: number, frequency: number): void;
@@ -34,7 +35,6 @@ export declare function N_0x6cd79468a1e595c6(padIndex: number): boolean;
 export declare function N_0x709ba8c08c5c008d(): void;
 export declare function N_0x771dfcb24d19c2f6(p0: any): any;
 export declare function N_0xa0cefcea390aab9b(p0: any): void;
-export declare function N_0xa45884db10ec7ee3(p0: any, p1: any, p2: any, p3: any): void;
 export declare function N_0xbd629c1c4f501c80(p0: any): any;
 export declare function N_0xcb0360efefb2580d(padIndex: number): void;
 export declare function N_0xd7d22f5592aed8ba(p0: number): number;
