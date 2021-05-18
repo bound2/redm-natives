@@ -103,6 +103,7 @@ function type(t: string): string {
         case "ItemSet":
         case "PropSet":
         case "PersChar":
+        case "PopZone":
             return "number";
         case "char":
         case "const char":
