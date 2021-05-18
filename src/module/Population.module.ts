@@ -1,6 +1,6 @@
 // Named functions
 export declare function ClearSpawnerInfoPriority(p0: string | number, p1: string | number): void;
-export declare function CreatePopzoneFromVolume(volume: Volume): PopZone;
+export declare function CreatePopzoneFromVolume(volume: number): PopZone;
 export declare function DeleteScriptPopzone(popZone: PopZone): void;
 export declare function DisableAmbientRoadPopulation(unk: boolean): void;
 export declare function EnableAmbientRoadPopulation(): void;

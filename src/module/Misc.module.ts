@@ -2,7 +2,7 @@
 export declare function Absf(value: number): number;
 export declare function Absi(value: number): number;
 export declare function Acos(p0: number): number;
-export declare function AddDispatchSpawnBlockingArea(volume: Volume): any;
+export declare function AddDispatchSpawnBlockingArea(volume: number): any;
 export declare function AddPopMultiplierArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, p6: number, p7: number, p8: boolean, p9: boolean): number;
 export declare function AddTacticalAnalysisPoint(p0: any, p1: any, p2: any, p3: any): void;
 export declare function AreStringsEqual(): [boolean, string, string];

@@ -421,7 +421,7 @@ export declare function SpawnpointsIsSearchComplete(): boolean;
 export declare function SpawnpointsIsSearchFailed(): boolean;
 export declare function SpawnpointsStartSearch(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any): void;
 export declare function SpawnpointsStartSearchInAngledArea(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any, p10: any): void;
-export declare function SpawnpointsStartSearchWithVolume(volume: Volume, flags: number, p2: number, duration: number, p4: number): void;
+export declare function SpawnpointsStartSearchWithVolume(volume: number, flags: number, p2: number, duration: number, p4: number): void;
 export declare function UpdatePedTexture(textureId: number): void;
 export declare function UpdatePedVariation(ped: number, p1: boolean, p2: boolean, p3: boolean, p4: boolean, p5: boolean): void;
 export declare function WasPedSkeletonUpdated(ped: number): boolean;

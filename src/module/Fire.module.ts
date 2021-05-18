@@ -11,7 +11,7 @@ export declare function IsExplosionActiveInArea(explosionType: number, x1: numbe
 export declare function IsExplosionInAngledArea(explosionType: number, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, angle: number): boolean;
 export declare function IsExplosionInArea(explosionType: number, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
 export declare function IsExplosionInSphere(explosionType: number, x: number, y: number, z: number, radius: number): boolean;
-export declare function IsExplosionInVolume(explosionType: number, volume: Volume): boolean;
+export declare function IsExplosionInVolume(explosionType: number, volume: number): boolean;
 export declare function RemoveScriptFire(fireHandle: number): void;
 export declare function StartEntityFire(p0: any, p1: any, p2: any, p3: any): void;
 export declare function StartScriptFire(x: number, y: number, z: number, p3: number, p4: number, p5: boolean, p7: number, p8: number): [number, string];

@@ -31,7 +31,7 @@ export declare function SetRoadsBackToOriginal(p0: any, p1: any, p2: any, p3: an
 export declare function SetRoadsBackToOriginalInAngledArea(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any): void;
 export declare function SetRoadsInAngledArea(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any, p9: any, p10: any): void;
 export declare function SetRoadsInArea(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any, p7: any, p8: any): void;
-export declare function SetRoadsInVolume(volume: Volume, p1: boolean, p2: boolean, p3: boolean): void;
+export declare function SetRoadsInVolume(volume: number, p1: boolean, p2: boolean, p3: boolean): void;
 export declare function SimulatedRouteGetEta(p0: any): number;
 export declare function SimulatedRouteIsLoaded(p0: any): boolean;
 export declare function SimulatedRouteTravelToPoint(p0: any, p1: number, p2: number): void;

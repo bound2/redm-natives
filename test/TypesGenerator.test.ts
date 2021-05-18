@@ -97,6 +97,7 @@ function type(t: string): string {
         case "Blip":
         case "Pickup":
         case "AnimScene":
+        case "Volume":
             return "number";
         case "char":
         case "const char":

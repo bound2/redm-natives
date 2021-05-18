@@ -47,7 +47,7 @@ export declare function SetGpsFlags(p0: number, p1: number): void;
 export declare function SetGpsMultiRouteRender(toggle: boolean): void;
 export declare function SetMinimapFowOverrideRevealScale(scale: number, p1: string | number): void;
 export declare function SetMinimapFowRevealCoordinate(x: number, y: number, z: number, p3: string | number): void;
-export declare function SetMinimapFowRevealVolume(volume: Volume, p1: string | number): void;
+export declare function SetMinimapFowRevealVolume(volume: number, p1: string | number): void;
 export declare function SetMinimapFowShouldUpdate(toggle: boolean, p1: string | number): void;
 export declare function SetMinimapHideFow(toggle: boolean): void;
 export declare function SetPausemapCoordsWithRadius(x: number, y: number, z: number, radius: number): void;
