@@ -14,10 +14,10 @@ export declare function CashinventoryTransactionGetItemInfo(id: number, index: n
 export declare function CashinventoryTransactionGetNumOfItems(id: number): number;
 export declare function CashinventoryTransactionResponseGetItemInfo(id: number, index: number): [boolean, any];
 export declare function CashinventoryTransactionStart(type: string | number, actionHash: string | number): [boolean, number];
+export declare function CashinventoryTransactionValidateItem(p0: any, p1: any): any;
 // Hash functions
 export declare function N_0x38640a8c2def011b(p0: any): any;
 export declare function N_0x3fa09dd57b93c0de(p0: any, p1: any, p2: any, p3: any, p4: any): any;
-export declare function N_0x6c9f12700bce69f4(p0: any, p1: any): any;
 export declare function N_0x92a32ba29622763f(id: number, index: number): [boolean, any];
 export declare function N_0xa0b7094629724974(p0: any, p1: any): any;
 export declare function N_0xa3b8d31c13cb4239(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;

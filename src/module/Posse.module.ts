@@ -1,4 +1,5 @@
 // Named functions
+export declare function PosseGetPosseMembershipCount(): number;
 // Hash functions
 export declare function N_0xc06cff658b2e51da(p0: any, p1: any, p2: any): any;
 export declare function N_0xc07cff658b2e51da(p0: any, p1: any): any;
@@ -12,7 +13,6 @@ export declare function N_0xc084ff658b2e81da(p0: any, p1: any, p2: any): any;
 export declare function N_0xc086ff658b2e51da(p0: any): any;
 export declare function N_0xc086ff658b2e51db(): any;
 export declare function N_0xc087ff658b2e51da(p0: any, p1: any): any;
-export declare function N_0xc088ff658b2e51da(): any;
 export declare function N_0xc089ff658b2e51da(p0: any, p1: any): any;
 export declare function N_0xc08aff658b2e51da(p0: any): void;
 export declare function N_0xc08aff658b2e51db(p0: any): void;

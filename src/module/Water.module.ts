@@ -1,6 +1,6 @@
 // Named functions
-export declare function DisableWaterCollision(): void;
-export declare function EnableWaterCollision(): void;
+export declare function DisableWaterLookup(): void;
+export declare function EnableWaterLookup(): void;
 export declare function GetWaterHeight(x: number, y: number, z: number): [boolean, number];
 export declare function GetWaterHeightNoWaves(x: number, y: number, z: number): [boolean, number];
 export declare function GetWorldWaterType(): number;

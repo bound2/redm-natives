@@ -1,17 +1,17 @@
 // Named functions
+export declare function SavegameIsSavePending(): boolean;
+export declare function SavegameSaveMp(savegameType: string | number): boolean;
+export declare function SavegameSaveSp(savegameType: string | number): boolean;
 // Hash functions
 export declare function N_0x1431540bca1a1bd2(): any;
-export declare function N_0x1840f3b30ed0105f(p0: any): any;
 export declare function N_0x186608a2ac6f9e88(p0: any, p1: any): void;
 export declare function N_0x35defecae36d4fae(p0: any, p1: any): void;
-export declare function N_0x3cf46f55c6585590(): any;
 export declare function N_0x443174c20b8b9e7f(p0: any, p1: any, p2: any): void;
 export declare function N_0x4845e7e7643a908c(p0: any, p1: any): void;
 export declare function N_0x4fb5869e2b37fc00(): void;
 export declare function N_0x529b9ccd0972af4d(p0: any, p1: any): void;
 export declare function N_0x529b9ccd0972af4e(p0: any, p1: any): void;
 export declare function N_0x5a10d6506b2f2c63(p0: any, p1: any): void;
-export declare function N_0x62c9eb51656d68ce(p0: any): any;
 export declare function N_0x81f4e92be3958364(p0: any, p1: any, p2: any): void;
 export declare function N_0x8e8ffb9e4ad051d2(p0: any, p1: any, p2: any, p3: any): void;
 export declare function N_0x9bb83c4dd7be0802(p0: any, p1: any, p2: any, p3: any, p4: any): void;

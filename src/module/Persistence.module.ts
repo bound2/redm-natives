@@ -1,4 +1,5 @@
 // Named functions
+export declare function PersistenceRemoveAllEntitiesInArea(x: number, y: number, z: number, radius: number): void;
 // Hash functions
 export declare function N_0x065887b694359799(p0: any): void;
 export declare function N_0x188313616d184213(p0: any, p1: any, p2: any, p3: any): any;
@@ -11,7 +12,6 @@ export declare function N_0x66daa3a9274e8e82(): void;
 export declare function N_0x7a1bd123e5cdb6e5(): void;
 export declare function N_0x8245c1f3262f4ac2(p0: any): void;
 export declare function N_0x8de104bec243a73b(p0: any): void;
-export declare function N_0x9d16896f0dbe78a2(p0: any, p1: any, p2: any, p3: any): void;
 export declare function N_0xb03140014aca6c40(p0: any, p1: any): void;
 export declare function N_0xb6e1a185c2b9319a(p0: any, p1: any, p2: any): any;
 export declare function N_0xba2c49ea6a8d24ff(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any, p6: any): any;
