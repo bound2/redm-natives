@@ -1,7 +1,7 @@
 // Named functions
-export declare function CreatePersistentCharacter(hash: string | number): PersChar;
-export declare function IsPersistentCharacterDead(persChar: PersChar): boolean;
-export declare function IsPersistentCharacterValid(persChar: PersChar): boolean;
+export declare function CreatePersistentCharacter(hash: string | number): number;
+export declare function IsPersistentCharacterDead(persChar: number): boolean;
+export declare function IsPersistentCharacterValid(persChar: number): boolean;
 // Hash functions
 export declare function N_0x08fc896d2cb31fcc(p0: any, p1: any): any;
 export declare function N_0x0b3a99ab6713aa52(p0: any): void;
