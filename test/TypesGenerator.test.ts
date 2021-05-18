@@ -99,6 +99,7 @@ function type(t: string): string {
         case "AnimScene":
         case "Volume":
         case "Prompt":
+        case "Interior":
             return "number";
         case "char":
         case "const char":
