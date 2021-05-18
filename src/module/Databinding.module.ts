@@ -51,7 +51,7 @@ export declare function DatabindingWriteDataHashStringFromParentByHash(p0: any, 
 export declare function DatabindingWriteDataInt(p0: any, p1: any): void;
 export declare function DatabindingWriteDataIntFromParent(p0: any, p1: any, p2: any): void;
 export declare function DatabindingWriteDataIntFromParentByHash(p0: any, p1: any, p2: any): void;
-export declare function DatabindingWriteDataScriptVariables(p0: any, p1: any, ...: ): void;
+export declare function DatabindingWriteDataScriptVariables(p0: any, p1: any, ...args: any[]): void;
 export declare function DatabindingWriteDataString(p0: any, p1: any): void;
 export declare function DatabindingWriteStringFromParent(p0: any, p1: any, p2: any): void;
 export declare function VirtualCollectionExists(p0: any): any;

@@ -68,6 +68,9 @@ function safeVarName(s: string): string {
     if (reservedKeywords.includes(s)) {
         return `a${capitalize(s)}`;
     }
+    if (s === "...") {
+        return `${s}args`;
+    }
     return s;
 }
 
@@ -76,6 +79,8 @@ function type(t: string): string {
         t = t.slice(0, -1);
     }
     switch (t) {
+        case "":
+            return "any[]";
         case "Any":
             return "any";
         case "BOOL":

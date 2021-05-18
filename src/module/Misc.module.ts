@@ -174,7 +174,7 @@ export declare function StringToInt(): [boolean, string, number];
 export declare function Tan(p0: number): number;
 export declare function UiIsSingleplayerPauseMenuActive(): boolean;
 export declare function UpdateOnscreenKeyboard(): number;
-export declare function VarString(flags: number, ...: ): string;
+export declare function VarString(flags: number, ...args: any[]): string;
 export declare function WaterOverrideSetOceanwavemaxamplitude(maxAmplitude: number): void;
 export declare function WaterOverrideSetShorewaveamplitude(amplitude: number): void;
 // Hash functions
