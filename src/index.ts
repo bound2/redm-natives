@@ -40,7 +40,7 @@ export * from './module/MissionData.module';
 export * from './module/Money.module';
 export * from './module/Namespace4.module';
 export * from './module/Namespace30.module';
-export * from './module/Namespace70.module';
+export * from './module/UiDebug.module';
 export * from './module/Ik.module';
 export * from './module/UiStickyFeed.module';
 export * from './module/Netshopping.module';

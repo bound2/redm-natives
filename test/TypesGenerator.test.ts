@@ -537,9 +537,9 @@ describe('Module declaration generator',
             const ns = "_NAMESPACE4";
             moduleDeclaration(ns, "./out/Namespace4.module.ts");
         });
-        it('namespace70', () => {
-            const ns = "_NAMESPACE70";
-            moduleDeclaration(ns, "./out/Namespace70.module.ts");
+        it('uidebug', () => {
+            const ns = "UIDEBUG";
+            moduleDeclaration(ns, "./out/UiDebug.module.ts");
         });
         it('uistickyfeed', () => {
             const ns = "UISTICKYFEED";
