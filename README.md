@@ -6,15 +6,3 @@ TypeScript RedM natives
 
 ### Usage
 Add dependency to your project with `yarn add redm-natives`
-
-#### Usage in code with all natives together
-```
-import * as Natives from 'redm-natives';
-Natives.N_0x00ffe0f85253c572("hello");
-```
-
-### Usage in code with specific module
-```
-import * as PlayerNatives from "redm-natives/dist/module/Player.module";
-const playerPed = PlayerNatives.PlayerPedId();
-```
