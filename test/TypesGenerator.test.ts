@@ -57,7 +57,7 @@ interface Generatable {
 }
 
 function toDeclaration(g: Generatable): string {
-    return `export declare function ${g.funcName}(${g.funcParamString}): ${g.returnTypesString};`;
+    return `declare function ${g.funcName}(${g.funcParamString}): ${g.returnTypesString};`;
 }
 
 function capitalize(s: string): string {
@@ -179,7 +179,7 @@ function moduleDeclaration(ns: string, filepath: string): void {
         }
     }
 
-    fs.removeSync(filepath);
+    //fs.removeSync(filepath);
     const writeFn = (s: string): void => {
         fs.outputFileSync(filepath, s + EOL, { flag: "a+" });
     };
@@ -203,347 +203,347 @@ describe('Module declaration generator',
     () => {
         it('aitransport', () => {
             const ns = "AITRANSPORT";
-            moduleDeclaration(ns, "./out/AiTransport.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('aicoverpoint', () => {
             const ns = "AICOVERPOINT";
-            moduleDeclaration(ns, "./out/AiCoverpoint.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('animscene', () => {
             const ns = "ANIMSCENE";
-            moduleDeclaration(ns, "./out/Animscene.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('bounty', () => {
             const ns = "BOUNTY";
-            moduleDeclaration(ns, "./out/Bounty.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('audio', () => {
             const ns = "AUDIO";
-            moduleDeclaration(ns, "./out/Audio.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('attribute', () => {
             const ns = "ATTRIBUTE";
-            moduleDeclaration(ns, "./out/Attribute.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('brain', () => {
             const ns = "BRAIN";
-            moduleDeclaration(ns, "./out/Brain.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('builtin', () => {
             const ns = "BUILTIN";
-            moduleDeclaration(ns, "./out/Builtin.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('clock', () => {
             const ns = "CLOCK";
-            moduleDeclaration(ns, "./out/Clock.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('cam', () => {
             const ns = "CAM";
-            moduleDeclaration(ns, "./out/Cam.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('collection', () => {
             const ns = "COLLECTION";
-            moduleDeclaration(ns, "./out/Collection.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('compapp', () => {
             const ns = "COMPAPP";
-            moduleDeclaration(ns, "./out/CompApp.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('companion', () => {
             const ns = "COMPANION";
-            moduleDeclaration(ns, "./out/Companion.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('compendium', () => {
             const ns = "COMPENDIUM";
-            moduleDeclaration(ns, "./out/Compendium.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('crashlog', () => {
             const ns = "CRASHLOG";
-            moduleDeclaration(ns, "./out/CrashLog.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('databinding', () => {
             const ns = "DATABINDING";
-            moduleDeclaration(ns, "./out/Databinding.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('crew', () => {
             const ns = "CREW";
-            moduleDeclaration(ns, "./out/Crew.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('datafile', () => {
             const ns = "DATAFILE";
-            moduleDeclaration(ns, "./out/Datafile.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('decorator', () => {
             const ns = "DECORATOR";
-            moduleDeclaration(ns, "./out/Decorator.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('debug', () => {
             const ns = "DEBUG";
-            moduleDeclaration(ns, "./out/Debug.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('dlc', () => {
             const ns = "DLC";
-            moduleDeclaration(ns, "./out/Dlc.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('entity', () => {
             const ns = "ENTITY";
-            moduleDeclaration(ns, "./out/Entity.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('event', () => {
             const ns = "EVENT";
-            moduleDeclaration(ns, "./out/Event.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('fire', () => {
             const ns = "FIRE";
-            moduleDeclaration(ns, "./out/Fire.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('gang', () => {
             const ns = "GANG";
-            moduleDeclaration(ns, "./out/Gang.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('googleanalytics', () => {
             const ns = "GOOGLE_ANALYTICS";
-            moduleDeclaration(ns, "./out/GoogleAnalytics.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('flock', () => {
             const ns = "FLOCK";
-            moduleDeclaration(ns, "./out/Flock.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('graphics', () => {
             const ns = "GRAPHICS";
-            moduleDeclaration(ns, "./out/Graphics.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('inventory', () => {
             const ns = "INVENTORY";
-            moduleDeclaration(ns, "./out/Inventory.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('hud', () => {
             const ns = "HUD";
-            moduleDeclaration(ns, "./out/Hud.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('interior', () => {
             const ns = "INTERIOR";
-            moduleDeclaration(ns, "./out/Interior.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('itemdatabase', () => {
             const ns = "ITEMDATABASE";
-            moduleDeclaration(ns, "./out/ItemDatabase.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('itemset', () => {
             const ns = "ITEMSET";
-            moduleDeclaration(ns, "./out/ItemSet.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('law', () => {
             const ns = "LAW";
-            moduleDeclaration(ns, "./out/Law.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('localization', () => {
             const ns = "LOCALIZATION";
-            moduleDeclaration(ns, "./out/Localization.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('map', () => {
             const ns = "MAP";
-            moduleDeclaration(ns, "./out/Map.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('missiondata', () => {
             const ns = "MISSIONDATA";
-            moduleDeclaration(ns, "./out/MissionData.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('minigame', () => {
             const ns = "MINIGAME";
-            moduleDeclaration(ns, "./out/Minigame.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('misc', () => {
             const ns = "MISC";
-            moduleDeclaration(ns, "./out/Misc.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('money', () => {
             const ns = "MONEY";
-            moduleDeclaration(ns, "./out/Money.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('netshopping', () => {
             const ns = "NETSHOPPING";
-            moduleDeclaration(ns, "./out/Netshopping.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('network', () => {
             const ns = "NETWORK";
-            moduleDeclaration(ns, "./out/Network.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('persistence', () => {
             const ns = "PERSISTENCE";
-            moduleDeclaration(ns, "./out/Persistence.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('object', () => {
             const ns = "OBJECT";
-            moduleDeclaration(ns, "./out/Object.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('pathfind', () => {
             const ns = "PATHFIND";
-            moduleDeclaration(ns, "./out/Pathfind.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('pad', () => {
             const ns = "PAD";
-            moduleDeclaration(ns, "./out/Pad.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('perschar', () => {
             const ns = "PERSCHAR";
-            moduleDeclaration(ns, "./out/Perschar.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('physics', () => {
             const ns = "PHYSICS";
-            moduleDeclaration(ns, "./out/Physics.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('player', () => {
             const ns = "PLAYER";
-            moduleDeclaration(ns, "./out/Player.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('population', () => {
             const ns = "POPULATION";
-            moduleDeclaration(ns, "./out/Population.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('ped', () => {
             const ns = "PED";
-            moduleDeclaration(ns, "./out/Ped.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('posse', () => {
             const ns = "POSSE";
-            moduleDeclaration(ns, "./out/Posse.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('propset', () => {
             const ns = "PROPSET";
-            moduleDeclaration(ns, "./out/PropSet.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('queue', () => {
             const ns = "QUEUE";
-            moduleDeclaration(ns, "./out/Queue.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('recording', () => {
             const ns = "RECORDING";
-            moduleDeclaration(ns, "./out/Recording.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('save', () => {
             const ns = "SAVE";
-            moduleDeclaration(ns, "./out/Save.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('replay', () => {
             const ns = "REPLAY";
-            moduleDeclaration(ns, "./out/Replay.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('socialclub', () => {
             const ns = "SOCIALCLUB";
-            moduleDeclaration(ns, "./out/SocialClub.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('scripts', () => {
             const ns = "SCRIPTS";
-            moduleDeclaration(ns, "./out/Scripts.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('shapetest', () => {
             const ns = "SHAPETEST";
-            moduleDeclaration(ns, "./out/ShapeTest.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('socialclubfeed', () => {
             const ns = "SOCIALCLUBFEED";
-            moduleDeclaration(ns, "./out/SocialClubFeed.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('spactionproxy', () => {
             const ns = "SPACTIONPROXY";
-            moduleDeclaration(ns, "./out/SpactionProxy.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('stats', () => {
             const ns = "STATS";
-            moduleDeclaration(ns, "./out/Stats.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('streaming', () => {
             const ns = "STREAMING";
-            moduleDeclaration(ns, "./out/Streaming.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('telemetry', () => {
             const ns = "TELEMETRY";
-            moduleDeclaration(ns, "./out/Telemetry.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('txd', () => {
             const ns = "TXD";
-            moduleDeclaration(ns, "./out/Txd.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('uiapps', () => {
             const ns = "UIAPPS";
-            moduleDeclaration(ns, "./out/UiApps.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('task', () => {
             const ns = "TASK";
-            moduleDeclaration(ns, "./out/Task.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('uievents', () => {
             const ns = "UIEVENTS";
-            moduleDeclaration(ns, "./out/UiEvents.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('uifeed', () => {
             const ns = "UIFEED";
-            moduleDeclaration(ns, "./out/UiFeed.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('uitutorial', () => {
             const ns = "UITUTORIAL";
-            moduleDeclaration(ns, "./out/UiTutorial.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('uistatemachine', () => {
             const ns = "UISTATEMACHINE";
-            moduleDeclaration(ns, "./out/UiStateMachine.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('uipinning', () => {
             const ns = "UIPINNING";
-            moduleDeclaration(ns, "./out/UiPinning.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('uilog', () => {
             const ns = "UILOG";
-            moduleDeclaration(ns, "./out/UiLog.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('unlock', () => {
             const ns = "UNLOCK";
-            moduleDeclaration(ns, "./out/Unlock.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('voice', () => {
             const ns = "VOICE";
-            moduleDeclaration(ns, "./out/Voice.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('volume', () => {
             const ns = "VOLUME";
-            moduleDeclaration(ns, "./out/Volume.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('water', () => {
             const ns = "WATER";
-            moduleDeclaration(ns, "./out/Water.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('vehicle', () => {
             const ns = "VEHICLE";
-            moduleDeclaration(ns, "./out/Vehicle.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('weapon', () => {
             const ns = "WEAPON";
-            moduleDeclaration(ns, "./out/Weapon.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('zone', () => {
             const ns = "ZONE";
-            moduleDeclaration(ns, "./out/Zone.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('ik', () => {
             const ns = "IK";
-            moduleDeclaration(ns, "./out/Ik.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('namespace30', () => {
             const ns = "_NAMESPACE30";
-            moduleDeclaration(ns, "./out/Namespace30.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('namespace4', () => {
             const ns = "_NAMESPACE4";
-            moduleDeclaration(ns, "./out/Namespace4.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('uidebug', () => {
             const ns = "UIDEBUG";
-            moduleDeclaration(ns, "./out/UiDebug.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
         it('uistickyfeed', () => {
             const ns = "UISTICKYFEED";
-            moduleDeclaration(ns, "./out/UiStickyFeed.module.ts");
+            moduleDeclaration(ns, "./out/index.ts");
         });
     }
 );
