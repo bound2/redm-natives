@@ -60,6 +60,10 @@ function toDeclaration(g: Generatable): string {
     return `declare function ${g.funcName}(${g.funcParamString}): ${g.returnTypesString};`;
 }
 
+function toHashFunctionName(fn: string): string {
+    return `N_${fn.toLowerCase()}`;
+}
+
 function capitalize(s: string): string {
     return s[0].toUpperCase() + s.slice(1).toLowerCase();
 }
@@ -131,9 +135,7 @@ function moduleDeclaration(ns: string, filepath: string): void {
         // Construct native function name that's invokable from JS
         let name: string = nsJson[fn].name;
         const hashNative = name.startsWith("_0x");
-        if (hashNative) {
-            name = `N_${fn.toLowerCase()}`;
-        } else {
+        if (!hashNative) {
             name = name.split("_")
                 .filter((p: string) => p)
                 .map((p: string) => capitalize(p))
@@ -167,15 +169,20 @@ function moduleDeclaration(ns: string, filepath: string): void {
             .map((p) => `${safeVarName(p.name)}: ${type(p.type)}`);
         const paramString: string = fnParams.join(", ");
 
-        const gen: Generatable = {
-            funcName: name,
+        const hashGen: Generatable = {
+            funcName: toHashFunctionName(fn),
             funcParamString: paramString,
             returnTypesString: returnTypesString
         };
-        if (hashNative) {
-            hashNatives.push(gen);
-        } else {
-            namedNatives.push(gen);
+        hashNatives.push(hashGen);
+
+        if (!hashNative) {
+            const namedGen: Generatable = {
+                funcName: name,
+                funcParamString: paramString,
+                returnTypesString: returnTypesString
+            };
+            namedNatives.push(namedGen);
         }
     }
 
