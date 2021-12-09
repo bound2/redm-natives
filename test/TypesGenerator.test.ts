@@ -53,11 +53,39 @@ interface Generatable {
 
     funcName: string;
     funcParamString: string;
+    funcParamWithoutTypesString: string;
     returnTypesString: string;
+}
+
+interface FacadeGeneratable {
+
+    hash: Generatable;
+    func: Generatable;
 }
 
 function toDeclaration(g: Generatable): string {
     return `declare function ${g.funcName}(${g.funcParamString}): ${g.returnTypesString};`;
+}
+
+function toFacadeFunction(g: FacadeGeneratable): string {
+    if (g.func.returnTypesString === 'void') {
+        return `
+        public ${g.func.funcName}(${g.func.funcParamString}): ${g.func.returnTypesString} {
+            ${g.hash.funcName}(${g.hash.funcParamWithoutTypesString});
+        }`;
+    }
+    if (g.func.returnTypesString === 'boolean') {
+        // Use double not to convert some natives that return integer instead of boolean
+        return `
+        public ${g.func.funcName}(${g.func.funcParamString}): ${g.func.returnTypesString} {
+            return !!${g.hash.funcName}(${g.hash.funcParamWithoutTypesString});
+        }`;
+    } else {
+        return `
+        public ${g.func.funcName}(${g.func.funcParamString}): ${g.func.returnTypesString} {
+            return ${g.hash.funcName}(${g.hash.funcParamWithoutTypesString});
+        }`;
+    }
 }
 
 function toHashFunctionName(fn: string): string {
@@ -131,6 +159,7 @@ function moduleDeclaration(ns: string, filepath: string): void {
 
     const hashNatives: Array<Generatable> = new Array<Generatable>();
     const namedNatives: Array<Generatable> = new Array<Generatable>();
+    const facadeGeneratables: Array<FacadeGeneratable> = new Array<FacadeGeneratable>();
     for (const fn of nsFns) {
         // Construct native function name that's invokable from JS
         let name: string = nsJson[fn].name;
@@ -169,9 +198,16 @@ function moduleDeclaration(ns: string, filepath: string): void {
             .map((p) => `${safeVarName(p.name)}: ${type(p.type)}`);
         const paramString: string = fnParams.join(", ");
 
+        // Gather function parameters
+        const fnParamsWithoutType: Array<string> = params
+            .filter((p) => !rFn(p))
+            .map((p) => `${safeVarName(p.name)}`);
+        const paramWithoutTypeString: string = fnParamsWithoutType.join(", ");
+
         const hashGen: Generatable = {
             funcName: toHashFunctionName(fn),
             funcParamString: paramString,
+            funcParamWithoutTypesString: paramWithoutTypeString,
             returnTypesString: returnTypesString
         };
         hashNatives.push(hashGen);
@@ -180,9 +216,19 @@ function moduleDeclaration(ns: string, filepath: string): void {
             const namedGen: Generatable = {
                 funcName: name,
                 funcParamString: paramString,
+                funcParamWithoutTypesString: paramWithoutTypeString,
                 returnTypesString: returnTypesString
             };
             namedNatives.push(namedGen);
+            facadeGeneratables.push({ hash: hashGen, func: namedGen });
+        } else {
+            const funcGen: Generatable = {
+                funcName: toHashFunctionName(fn),
+                funcParamString: paramString,
+                funcParamWithoutTypesString: paramWithoutTypeString,
+                returnTypesString: returnTypesString
+            };
+            facadeGeneratables.push({ hash: hashGen, func: funcGen });
         }
     }
 
@@ -194,6 +240,14 @@ function moduleDeclaration(ns: string, filepath: string): void {
     namedNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => writeFn(toDeclaration(n)));
     writeFn("// Hash functions");
     hashNatives.sort((a, b) => a.funcName.localeCompare(b.funcName)).forEach((n) => writeFn(toDeclaration(n)));
+
+    // Additionally write some facade stuff for another project
+    const facadeWriteFn = (s: string): void => {
+        fs.outputFileSync("./out/facade.ts", s + EOL, { flag: "a+" });
+    };
+    facadeWriteFn("export class NativeFacade {\n");
+    facadeGeneratables.forEach((n) => facadeWriteFn(toFacadeFunction(n)));
+    facadeWriteFn("\n}\n");
 }
 
 describe('Modules',
