@@ -71,19 +71,19 @@ function toFacadeFunction(g: FacadeGeneratable): string {
     if (g.func.returnTypesString === 'void') {
         return `
         public ${g.func.funcName}(${g.func.funcParamString}): ${g.func.returnTypesString} {
-            ${g.hash.funcName}(${g.hash.funcParamWithoutTypesString});
+            Citizen.invokeNative('${g.hash.funcName}', ${g.hash.funcParamWithoutTypesString});
         }`;
     }
     if (g.func.returnTypesString === 'boolean') {
         // Use double not to convert some natives that return integer instead of boolean
         return `
         public ${g.func.funcName}(${g.func.funcParamString}): ${g.func.returnTypesString} {
-            return !!${g.hash.funcName}(${g.hash.funcParamWithoutTypesString});
+            return !!(Citizen.invokeNative('${g.hash.funcName}', ${g.hash.funcParamWithoutTypesString}) as unknown as ${g.func.returnTypesString});
         }`;
     } else {
         return `
         public ${g.func.funcName}(${g.func.funcParamString}): ${g.func.returnTypesString} {
-            return ${g.hash.funcName}(${g.hash.funcParamWithoutTypesString});
+            return Citizen.invokeNative('${g.hash.funcName}', ${g.hash.funcParamWithoutTypesString}) as unknown as ${g.func.returnTypesString};
         }`;
     }
 }
@@ -212,6 +212,13 @@ function moduleDeclaration(ns: string, filepath: string): void {
         };
         hashNatives.push(hashGen);
 
+        const invokeNativeGen: Generatable = {
+            funcName: fn,
+            funcParamString: paramString,
+            funcParamWithoutTypesString: paramWithoutTypeString,
+            returnTypesString: returnTypesString
+        };
+
         if (!hashNative) {
             const namedGen: Generatable = {
                 funcName: name,
@@ -220,15 +227,9 @@ function moduleDeclaration(ns: string, filepath: string): void {
                 returnTypesString: returnTypesString
             };
             namedNatives.push(namedGen);
-            facadeGeneratables.push({ hash: hashGen, func: namedGen });
+            facadeGeneratables.push({ hash: invokeNativeGen, func: namedGen });
         } else {
-            const funcGen: Generatable = {
-                funcName: toHashFunctionName(fn),
-                funcParamString: paramString,
-                funcParamWithoutTypesString: paramWithoutTypeString,
-                returnTypesString: returnTypesString
-            };
-            facadeGeneratables.push({ hash: hashGen, func: funcGen });
+            facadeGeneratables.push({ hash: invokeNativeGen, func: hashGen });
         }
     }
 
@@ -243,11 +244,9 @@ function moduleDeclaration(ns: string, filepath: string): void {
 
     // Additionally write some facade stuff for another project
     const facadeWriteFn = (s: string): void => {
-        fs.outputFileSync("./out/facade.ts", s + EOL, { flag: "a+" });
+        fs.outputFileSync("./out/facade.txt", s + EOL, { flag: "a+" });
     };
-    facadeWriteFn("export class NativeFacade {\n");
     facadeGeneratables.forEach((n) => facadeWriteFn(toFacadeFunction(n)));
-    facadeWriteFn("\n}\n");
 }
 
 describe('Modules',
